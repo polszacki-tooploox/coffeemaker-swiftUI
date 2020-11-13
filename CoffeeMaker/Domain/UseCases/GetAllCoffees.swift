@@ -8,9 +8,11 @@
 import Foundation
 import Combine
 
-final class GetAllCoffees {
+public final class GetAllCoffees {
 
-    func execute() -> AnyPublisher<[Coffee], Never> {
+    public init() {}
+
+    public func execute() -> AnyPublisher<[Coffee], Never> {
         let testCoffees = [
             Coffee(name: "Się Przelewa Owoc", imagePath: nil),
             Coffee(name: "Geysha", imagePath: nil),

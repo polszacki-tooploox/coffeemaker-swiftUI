@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Coffee {
-    let name: String
-    let imagePath: String?
+public struct Coffee {
+    public let name: String
+    public let imagePath: String?
 }

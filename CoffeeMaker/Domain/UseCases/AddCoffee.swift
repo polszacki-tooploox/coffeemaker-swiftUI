@@ -8,9 +8,11 @@
 import Foundation
 import Combine
 
-final class AddCoffee {
+public final class AddCoffee {
 
-    func execute(coffee: Coffee) -> AnyPublisher<Never, Never> {
+    public init() {}
+    
+    public func execute(coffee: Coffee) -> AnyPublisher<Never, Never> {
         // TODO
         return Empty<Never, Never>().eraseToAnyPublisher()
     }
