@@ -1,0 +1,29 @@
+platform :ios, '14.0'
+
+
+def common
+end
+
+def commonTest
+
+end
+
+target 'CoffeeMaker' do
+  use_frameworks!
+  common
+
+  target 'CoffeeMakerTests' do
+    inherit! :search_paths
+    commonTest
+  end
+end
+
+target 'Domain' do
+  use_frameworks!
+  common
+
+  target 'DomainTests' do
+    commonTest
+  end
+end
+

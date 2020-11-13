@@ -6,3 +6,12 @@
 //
 
 import Foundation
+import Combine
+
+final class RemoveCoffee {
+
+    func execute(coffee: Coffee) -> AnyPublisher<Never, Never> {
+        // TODO
+        return Empty<Never, Never>().eraseToAnyPublisher()
+    }
+}

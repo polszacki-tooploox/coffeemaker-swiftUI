@@ -6,3 +6,18 @@
 //
 
 import Foundation
+import Combine
+
+final class GetAllCoffees {
+
+    func execute() -> AnyPublisher<[Coffee], Never> {
+        let testCoffees = [
+            Coffee(name: "Się Przelewa Owoc", imagePath: nil),
+            Coffee(name: "Geysha", imagePath: nil),
+            Coffee(name: "Cloudberry", imagePath: nil),
+            Coffee(name: "Tchibo Exclusive", imagePath: nil)
+
+        ]
+        return Just(testCoffees).eraseToAnyPublisher()
+    }
+}
