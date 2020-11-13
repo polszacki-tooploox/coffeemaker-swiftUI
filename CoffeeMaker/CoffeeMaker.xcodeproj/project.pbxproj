@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2EFC5F7255EB19500D9E93F /* CoffeeMakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EFC5F6255EB19500D9E93F /* CoffeeMakerApp.swift */; };
+		A2EFC5F9255EB19500D9E93F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EFC5F8255EB19500D9E93F /* ContentView.swift */; };
+		A2EFC5FB255EB19700D9E93F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2EFC5FA255EB19700D9E93F /* Assets.xcassets */; };
+		A2EFC5FE255EB19700D9E93F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2EFC5FD255EB19700D9E93F /* Preview Assets.xcassets */; };
+		A2EFC600255EB19700D9E93F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EFC5FF255EB19700D9E93F /* Persistence.swift */; };
+		A2EFC603255EB19700D9E93F /* CoffeeMaker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2EFC601255EB19700D9E93F /* CoffeeMaker.xcdatamodeld */; };
+		A2EFC60E255EB19800D9E93F /* CoffeeMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EFC60D255EB19800D9E93F /* CoffeeMakerTests.swift */; };
+		A2EFC619255EB19800D9E93F /* CoffeeMakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EFC618255EB19800D9E93F /* CoffeeMakerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A2EFC60A255EB19800D9E93F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2EFC5EB255EB19500D9E93F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2EFC5F2255EB19500D9E93F;
+			remoteInfo = CoffeeMaker;
+		};
+		A2EFC615255EB19800D9E93F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2EFC5EB255EB19500D9E93F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2EFC5F2255EB19500D9E93F;
+			remoteInfo = CoffeeMaker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A2EFC5F3255EB19500D9E93F /* CoffeeMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2EFC5F6255EB19500D9E93F /* CoffeeMakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeMakerApp.swift; sourceTree = "<group>"; };
+		A2EFC5F8255EB19500D9E93F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A2EFC5FA255EB19700D9E93F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2EFC5FD255EB19700D9E93F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A2EFC5FF255EB19700D9E93F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		A2EFC602255EB19700D9E93F /* CoffeeMaker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoffeeMaker.xcdatamodel; sourceTree = "<group>"; };
+		A2EFC604255EB19700D9E93F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2EFC609255EB19800D9E93F /* CoffeeMakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeMakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2EFC60D255EB19800D9E93F /* CoffeeMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeMakerTests.swift; sourceTree = "<group>"; };
+		A2EFC60F255EB19800D9E93F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2EFC614255EB19800D9E93F /* CoffeeMakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeMakerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2EFC618255EB19800D9E93F /* CoffeeMakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeMakerUITests.swift; sourceTree = "<group>"; };
+		A2EFC61A255EB19800D9E93F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2EFC5F0255EB19500D9E93F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2EFC606255EB19800D9E93F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2EFC611255EB19800D9E93F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2EFC5EA255EB19500D9E93F = {
+			isa = PBXGroup;
+			children = (
+				A2EFC5F5255EB19500D9E93F /* CoffeeMaker */,
+				A2EFC60C255EB19800D9E93F /* CoffeeMakerTests */,
+				A2EFC617255EB19800D9E93F /* CoffeeMakerUITests */,
+				A2EFC5F4255EB19500D9E93F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2EFC5F4255EB19500D9E93F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2EFC5F3255EB19500D9E93F /* CoffeeMaker.app */,
+				A2EFC609255EB19800D9E93F /* CoffeeMakerTests.xctest */,
+				A2EFC614255EB19800D9E93F /* CoffeeMakerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2EFC5F5255EB19500D9E93F /* CoffeeMaker */ = {
+			isa = PBXGroup;
+			children = (
+				A2EFC5F6255EB19500D9E93F /* CoffeeMakerApp.swift */,
+				A2EFC5F8255EB19500D9E93F /* ContentView.swift */,
+				A2EFC5FA255EB19700D9E93F /* Assets.xcassets */,
+				A2EFC5FF255EB19700D9E93F /* Persistence.swift */,
+				A2EFC604255EB19700D9E93F /* Info.plist */,
+				A2EFC601255EB19700D9E93F /* CoffeeMaker.xcdatamodeld */,
+				A2EFC5FC255EB19700D9E93F /* Preview Content */,
+			);
+			path = CoffeeMaker;
+			sourceTree = "<group>";
+		};
+		A2EFC5FC255EB19700D9E93F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A2EFC5FD255EB19700D9E93F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A2EFC60C255EB19800D9E93F /* CoffeeMakerTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2EFC60D255EB19800D9E93F /* CoffeeMakerTests.swift */,
+				A2EFC60F255EB19800D9E93F /* Info.plist */,
+			);
+			path = CoffeeMakerTests;
+			sourceTree = "<group>";
+		};
+		A2EFC617255EB19800D9E93F /* CoffeeMakerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A2EFC618255EB19800D9E93F /* CoffeeMakerUITests.swift */,
+				A2EFC61A255EB19800D9E93F /* Info.plist */,
+			);
+			path = CoffeeMakerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2EFC5F2255EB19500D9E93F /* CoffeeMaker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2EFC61D255EB19800D9E93F /* Build configuration list for PBXNativeTarget "CoffeeMaker" */;
+			buildPhases = (
+				A2EFC5EF255EB19500D9E93F /* Sources */,
+				A2EFC5F0255EB19500D9E93F /* Frameworks */,
+				A2EFC5F1255EB19500D9E93F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoffeeMaker;
+			productName = CoffeeMaker;
+			productReference = A2EFC5F3255EB19500D9E93F /* CoffeeMaker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A2EFC608255EB19800D9E93F /* CoffeeMakerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2EFC620255EB19800D9E93F /* Build configuration list for PBXNativeTarget "CoffeeMakerTests" */;
+			buildPhases = (
+				A2EFC605255EB19800D9E93F /* Sources */,
+				A2EFC606255EB19800D9E93F /* Frameworks */,
+				A2EFC607255EB19800D9E93F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2EFC60B255EB19800D9E93F /* PBXTargetDependency */,
+			);
+			name = CoffeeMakerTests;
+			productName = CoffeeMakerTests;
+			productReference = A2EFC609255EB19800D9E93F /* CoffeeMakerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A2EFC613255EB19800D9E93F /* CoffeeMakerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2EFC623255EB19800D9E93F /* Build configuration list for PBXNativeTarget "CoffeeMakerUITests" */;
+			buildPhases = (
+				A2EFC610255EB19800D9E93F /* Sources */,
+				A2EFC611255EB19800D9E93F /* Frameworks */,
+				A2EFC612255EB19800D9E93F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2EFC616255EB19800D9E93F /* PBXTargetDependency */,
+			);
+			name = CoffeeMakerUITests;
+			productName = CoffeeMakerUITests;
+			productReference = A2EFC614255EB19800D9E93F /* CoffeeMakerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2EFC5EB255EB19500D9E93F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					A2EFC5F2255EB19500D9E93F = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					A2EFC608255EB19800D9E93F = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = A2EFC5F2255EB19500D9E93F;
+					};
+					A2EFC613255EB19800D9E93F = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = A2EFC5F2255EB19500D9E93F;
+					};
+				};
+			};
+			buildConfigurationList = A2EFC5EE255EB19500D9E93F /* Build configuration list for PBXProject "CoffeeMaker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A2EFC5EA255EB19500D9E93F;
+			productRefGroup = A2EFC5F4255EB19500D9E93F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2EFC5F2255EB19500D9E93F /* CoffeeMaker */,
+				A2EFC608255EB19800D9E93F /* CoffeeMakerTests */,
+				A2EFC613255EB19800D9E93F /* CoffeeMakerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2EFC5F1255EB19500D9E93F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2EFC5FE255EB19700D9E93F /* Preview Assets.xcassets in Resources */,
+				A2EFC5FB255EB19700D9E93F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2EFC607255EB19800D9E93F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2EFC612255EB19800D9E93F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2EFC5EF255EB19500D9E93F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2EFC603255EB19700D9E93F /* CoffeeMaker.xcdatamodeld in Sources */,
+				A2EFC600255EB19700D9E93F /* Persistence.swift in Sources */,
+				A2EFC5F9255EB19500D9E93F /* ContentView.swift in Sources */,
+				A2EFC5F7255EB19500D9E93F /* CoffeeMakerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2EFC605255EB19800D9E93F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2EFC60E255EB19800D9E93F /* CoffeeMakerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2EFC610255EB19800D9E93F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2EFC619255EB19800D9E93F /* CoffeeMakerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A2EFC60B255EB19800D9E93F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2EFC5F2255EB19500D9E93F /* CoffeeMaker */;
+			targetProxy = A2EFC60A255EB19800D9E93F /* PBXContainerItemProxy */;
+		};
+		A2EFC616255EB19800D9E93F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2EFC5F2255EB19500D9E93F /* CoffeeMaker */;
+			targetProxy = A2EFC615255EB19800D9E93F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A2EFC61B255EB19800D9E93F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A2EFC61C255EB19800D9E93F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2EFC61E255EB19800D9E93F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CoffeeMaker/Preview Content\"";
+				DEVELOPMENT_TEAM = 8E4R5MT7MB;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = CoffeeMaker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.polszacki.CoffeeMaker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A2EFC61F255EB19800D9E93F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CoffeeMaker/Preview Content\"";
+				DEVELOPMENT_TEAM = 8E4R5MT7MB;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = CoffeeMaker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.polszacki.CoffeeMaker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A2EFC621255EB19800D9E93F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8E4R5MT7MB;
+				INFOPLIST_FILE = CoffeeMakerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.polszacki.CoffeeMakerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeMaker.app/CoffeeMaker";
+			};
+			name = Debug;
+		};
+		A2EFC622255EB19800D9E93F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8E4R5MT7MB;
+				INFOPLIST_FILE = CoffeeMakerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.polszacki.CoffeeMakerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeMaker.app/CoffeeMaker";
+			};
+			name = Release;
+		};
+		A2EFC624255EB19800D9E93F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8E4R5MT7MB;
+				INFOPLIST_FILE = CoffeeMakerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.polszacki.CoffeeMakerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CoffeeMaker;
+			};
+			name = Debug;
+		};
+		A2EFC625255EB19800D9E93F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8E4R5MT7MB;
+				INFOPLIST_FILE = CoffeeMakerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.polszacki.CoffeeMakerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CoffeeMaker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2EFC5EE255EB19500D9E93F /* Build configuration list for PBXProject "CoffeeMaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2EFC61B255EB19800D9E93F /* Debug */,
+				A2EFC61C255EB19800D9E93F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2EFC61D255EB19800D9E93F /* Build configuration list for PBXNativeTarget "CoffeeMaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2EFC61E255EB19800D9E93F /* Debug */,
+				A2EFC61F255EB19800D9E93F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2EFC620255EB19800D9E93F /* Build configuration list for PBXNativeTarget "CoffeeMakerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2EFC621255EB19800D9E93F /* Debug */,
+				A2EFC622255EB19800D9E93F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2EFC623255EB19800D9E93F /* Build configuration list for PBXNativeTarget "CoffeeMakerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2EFC624255EB19800D9E93F /* Debug */,
+				A2EFC625255EB19800D9E93F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A2EFC601255EB19700D9E93F /* CoffeeMaker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A2EFC602255EB19700D9E93F /* CoffeeMaker.xcdatamodel */,
+			);
+			currentVersion = A2EFC602255EB19700D9E93F /* CoffeeMaker.xcdatamodel */;
+			path = CoffeeMaker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A2EFC5EB255EB19500D9E93F /* Project object */;
+}
