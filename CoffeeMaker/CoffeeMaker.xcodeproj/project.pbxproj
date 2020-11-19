@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		1E40BF0818FDA87147DEC00C /* Pods_Domain_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1CA2957EA67C5D404FB0611 /* Pods_Domain_DomainTests.framework */; };
 		7A763DE253F75662906E56C1 /* Pods_CoffeeMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B1D50E0B4193C7D5AF43AC4 /* Pods_CoffeeMaker.framework */; };
+		A2D2EF53256696B3004A9E97 /* CoffeeListConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D2EF52256696B3004A9E97 /* CoffeeListConnector.swift */; };
 		A2EFC5F7255EB19500D9E93F /* CoffeeMakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EFC5F6255EB19500D9E93F /* CoffeeMakerApp.swift */; };
-		A2EFC5F9255EB19500D9E93F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EFC5F8255EB19500D9E93F /* ContentView.swift */; };
 		A2EFC5FB255EB19700D9E93F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2EFC5FA255EB19700D9E93F /* Assets.xcassets */; };
 		A2EFC5FE255EB19700D9E93F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2EFC5FD255EB19700D9E93F /* Preview Assets.xcassets */; };
 		A2EFC600255EB19700D9E93F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EFC5FF255EB19700D9E93F /* Persistence.swift */; };
@@ -91,9 +91,9 @@
 		7CE901F2ECBA63608CECE0F2 /* Pods-CoffeeMaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeMaker.release.xcconfig"; path = "Target Support Files/Pods-CoffeeMaker/Pods-CoffeeMaker.release.xcconfig"; sourceTree = "<group>"; };
 		89065B775F6128E5762AB1C1 /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B9FC371D486F98496BEF9BA /* Pods-CoffeeMakerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeMakerTests.release.xcconfig"; path = "Target Support Files/Pods-CoffeeMakerTests/Pods-CoffeeMakerTests.release.xcconfig"; sourceTree = "<group>"; };
+		A2D2EF52256696B3004A9E97 /* CoffeeListConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeListConnector.swift; sourceTree = "<group>"; };
 		A2EFC5F3255EB19500D9E93F /* CoffeeMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2EFC5F6255EB19500D9E93F /* CoffeeMakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeMakerApp.swift; sourceTree = "<group>"; };
-		A2EFC5F8255EB19500D9E93F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A2EFC5FA255EB19700D9E93F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2EFC5FD255EB19700D9E93F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A2EFC5FF255EB19700D9E93F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -202,7 +202,6 @@
 			children = (
 				A2EFC6B3255EC40200D9E93F /* CoffeesList */,
 				A2EFC5F6255EB19500D9E93F /* CoffeeMakerApp.swift */,
-				A2EFC5F8255EB19500D9E93F /* ContentView.swift */,
 				A2EFC5FA255EB19700D9E93F /* Assets.xcassets */,
 				A2EFC5FF255EB19700D9E93F /* Persistence.swift */,
 				A2EFC604255EB19700D9E93F /* Info.plist */,
@@ -282,6 +281,7 @@
 			children = (
 				A2EFC6B4255EC41300D9E93F /* CoffeesList.swift */,
 				A2EFC6BE255EC4F400D9E93F /* CoffeesListViewModel.swift */,
+				A2D2EF52256696B3004A9E97 /* CoffeeListConnector.swift */,
 			);
 			path = CoffeesList;
 			sourceTree = "<group>";
@@ -613,9 +613,9 @@
 				A2EFC603255EB19700D9E93F /* CoffeeMaker.xcdatamodeld in Sources */,
 				A2EFC600255EB19700D9E93F /* Persistence.swift in Sources */,
 				A2EFC6B5255EC41300D9E93F /* CoffeesList.swift in Sources */,
-				A2EFC5F9255EB19500D9E93F /* ContentView.swift in Sources */,
 				A2EFC6BF255EC4F400D9E93F /* CoffeesListViewModel.swift in Sources */,
 				A2EFC5F7255EB19500D9E93F /* CoffeeMakerApp.swift in Sources */,
+				A2D2EF53256696B3004A9E97 /* CoffeeListConnector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,22 +23,30 @@ struct CoffeesList: View {
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(viewModel.dataSource, content: {
-                    Text($0.name)
-                })
+            VStack {
+                List {
+                    ForEach(viewModel.dataSource, content: { item in
+                        HStack {
+                            Image(systemName: "airplayvideo")
+                                .frame(width: 45.0, height: 45.0, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                                .cornerRadius(5.0)
+                            Text(item.name)
+                                .padding([.leading, .trailing], 10.0)
+                        }
+                    })
+                }
+
+
+                Button("Add coffee", action: {})
+                .navigationTitle(viewModel.title)
             }
-            .navigationTitle(viewModel.title)
         }
     }
 }
 
 struct CoffeesList_Previews: PreviewProvider {
     static var previews: some View {
-        CoffeesList(viewModel: CoffeesListViewModel(
-                        getAllCofffees: GetAllCoffees(),
-                        addCoffee: AddCoffee(),
-                        removeCoffee: RemoveCoffee()
-        ))
+        CoffeeListConnector().coffeeListView()
     }
 }
