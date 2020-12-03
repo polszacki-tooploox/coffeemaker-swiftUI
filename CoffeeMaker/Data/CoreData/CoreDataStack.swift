@@ -7,34 +7,23 @@
 
 import CoreData
 
-struct PersistenceController {
-    static let shared = PersistenceController()
+class CoreDataStack {
+    static let shared = CoreDataStack()
 
-    static var preview: PersistenceController = {
-        let result = PersistenceController(inMemory: true)
-        let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-        }
-        do {
-            try viewContext.save()
-        } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            let nsError = error as NSError
-            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-        }
-        return result
+    lazy var defaultContext: NSManagedObjectContext = {
+        return container.newBackgroundContext()
     }()
 
-    let container: NSPersistentContainer
+    private let container: NSPersistentContainer
 
-    init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "CoffeeMaker")
-        if inMemory {
-            container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
-        }
+    static let modelName = "CoffeeMaker"
+    static let model: NSManagedObjectModel = {
+        let modelURL = Bundle(for: CoreDataStack.self).url(forResource: modelName, withExtension: "momd")!
+      return NSManagedObjectModel(contentsOf: modelURL)!
+    }()
+
+    init() {
+        container = NSPersistentContainer(name: CoreDataStack.modelName, managedObjectModel: CoreDataStack.model)
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -51,5 +40,15 @@ struct PersistenceController {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
+    }
+
+    func saveContext(context: NSManagedObjectContext) {
+        context.perform {
+          do {
+            try context.save()
+          } catch let error as NSError {
+            assertionFailure("Unresolved error \(error), \(error.userInfo)")
+          }
+        }
     }
 }
