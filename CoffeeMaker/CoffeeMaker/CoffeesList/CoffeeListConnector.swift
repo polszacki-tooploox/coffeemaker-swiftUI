@@ -8,14 +8,18 @@
 import Foundation
 import SwiftUI
 import Domain
+import Data
 
 final class CoffeeListConnector {
 
     func coffeeListView() -> CoffeesList {
+        let repository = CoreDataCoffeeRepository()
+        let coffeeUseCase = CoffeeUseCase(coffeeRepository: repository)
+
         let viewModel = CoffeesListViewModel(
-            getAllCofffees: GetAllCoffees(),
-            addCoffee: AddCoffee(),
-            removeCoffee: RemoveCoffee()
+            getAllCofffees: coffeeUseCase,
+            addCoffee: coffeeUseCase,
+            deleteCoffee: coffeeUseCase
         )
         return CoffeesList(viewModel: viewModel)
     }

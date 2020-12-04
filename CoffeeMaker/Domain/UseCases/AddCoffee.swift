@@ -8,12 +8,6 @@
 import Foundation
 import Combine
 
-public final class AddCoffee {
-
-    public init() {}
-    
-    public func execute(coffee: Coffee) -> AnyPublisher<Never, Never> {
-        // TODO
-        return Empty<Never, Never>().eraseToAnyPublisher()
-    }
+public protocol AddCoffee {
+    func add(coffee: Coffee) -> AnyPublisher<Never, Error>
 }

@@ -8,18 +8,6 @@
 import Foundation
 import Combine
 
-public final class GetAllCoffees {
-
-    public init() {}
-
-    public func execute() -> AnyPublisher<[Coffee], Never> {
-        let testCoffees = [
-            Coffee(name: "Się Przelewa Owoc", imagePath: nil),
-            Coffee(name: "Geysha", imagePath: nil),
-            Coffee(name: "Cloudberry", imagePath: nil),
-            Coffee(name: "Tchibo Exclusive", imagePath: nil)
-
-        ]
-        return Just(testCoffees).eraseToAnyPublisher()
-    }
+public protocol GetAllCoffees {
+    func get() -> AnyPublisher<[Coffee], Error>
 }

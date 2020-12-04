@@ -15,20 +15,21 @@ final class CoffeesListViewModel: ObservableObject, Identifiable {
 
     private let getAllCofffees: GetAllCoffees
     private let addCoffee: AddCoffee
-    private let removeCoffee: RemoveCoffee
+    private let deleteCoffee: DeleteCoffee
     private var disposables = Set<AnyCancellable>()
 
     init(getAllCofffees: GetAllCoffees,
          addCoffee: AddCoffee,
-         removeCoffee: RemoveCoffee) {
+         deleteCoffee: DeleteCoffee) {
         self.getAllCofffees = getAllCofffees
         self.addCoffee = addCoffee
-        self.removeCoffee = removeCoffee
+        self.deleteCoffee = deleteCoffee
 
         setupBinding()
     }
 
     private func setupBinding() {
-        disposables.insert(getAllCofffees.execute().assign(to: \.dataSource, on: self))
+        // TODO: Handle error
+        disposables.insert(getAllCofffees.get().assertNoFailure().assign(to: \.dataSource, on: self))
     }
 }

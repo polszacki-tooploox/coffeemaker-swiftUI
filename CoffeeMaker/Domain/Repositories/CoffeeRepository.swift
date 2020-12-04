@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 public protocol CoffeeRepository {
-    func getAllCoffees() -> AnyPublisher<Coffee, Error>
+    func getAllCoffees() -> AnyPublisher<[Coffee], Error>
     func addCoffee(coffee: Coffee) -> AnyPublisher<Never, Error>
     func deleteCoffee(coffee: Coffee) -> AnyPublisher<Never, Error>
 }

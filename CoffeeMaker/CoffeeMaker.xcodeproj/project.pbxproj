@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		1E40BF0818FDA87147DEC00C /* Pods_Domain_DomainTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1CA2957EA67C5D404FB0611 /* Pods_Domain_DomainTests.framework */; };
 		7A763DE253F75662906E56C1 /* Pods_CoffeeMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B1D50E0B4193C7D5AF43AC4 /* Pods_CoffeeMaker.framework */; };
+		A20B8222257A76C800FEA9E4 /* Coffee+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20B8221257A76C800FEA9E4 /* Coffee+Utils.swift */; };
+		A20B8237257A862E00FEA9E4 /* CoffeeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20B8236257A862E00FEA9E4 /* CoffeeUseCase.swift */; };
 		A2576DA6256B9B4A00B1EF86 /* CoffeeMaker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2EFC601255EB19700D9E93F /* CoffeeMaker.xcdatamodeld */; };
 		A2576DAD256B9B6300B1EF86 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EFC5FF255EB19700D9E93F /* CoreDataStack.swift */; };
 		A2576DBC256BA1B100B1EF86 /* CoffeeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2576DBB256BA1B100B1EF86 /* CoffeeRepository.swift */; };
 		A2576DC5256BC2D800B1EF86 /* CoreDataCoffeeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2576DC4256BC2D800B1EF86 /* CoreDataCoffeeRepository.swift */; };
-		A2576DD9256BC7E000B1EF86 /* CoreDataPublishersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2576DD8256BC7E000B1EF86 /* CoreDataPublishersProvider.swift */; };
-		A2B17A922570E182003B346F /* FetchedResultsController+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B17A912570E182003B346F /* FetchedResultsController+Combine.swift */; };
+		A2B17A922570E182003B346F /* CoreDataEntitiesPublisherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B17A912570E182003B346F /* CoreDataEntitiesPublisherProvider.swift */; };
 		A2B17A9A2570F3B4003B346F /* CoreDataEntitiesPublisherProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B17A992570F3B4003B346F /* CoreDataEntitiesPublisherProviderTests.swift */; };
 		A2B17AA2257121D4003B346F /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B17AA1257121D4003B346F /* TestCoreDataStack.swift */; };
 		A2D2EF53256696B3004A9E97 /* CoffeeListConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D2EF52256696B3004A9E97 /* CoffeeListConnector.swift */; };
@@ -40,7 +41,7 @@
 		A2EFC682255EB93900D9E93F /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EFC681255EB93900D9E93F /* Coffee.swift */; };
 		A2EFC688255EB99500D9E93F /* GetAllCoffees.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EFC687255EB99500D9E93F /* GetAllCoffees.swift */; };
 		A2EFC68E255EB99F00D9E93F /* AddCoffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EFC68D255EB99F00D9E93F /* AddCoffee.swift */; };
-		A2EFC694255EB9A700D9E93F /* RemoveCoffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EFC693255EB9A700D9E93F /* RemoveCoffee.swift */; };
+		A2EFC694255EB9A700D9E93F /* DeleteCoffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EFC693255EB9A700D9E93F /* DeleteCoffee.swift */; };
 		A2EFC6B5255EC41300D9E93F /* CoffeesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EFC6B4255EC41300D9E93F /* CoffeesList.swift */; };
 		A2EFC6BF255EC4F400D9E93F /* CoffeesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EFC6BE255EC4F400D9E93F /* CoffeesListViewModel.swift */; };
 		BA91A5A274BA2423ED1F9BE2 /* Pods_CoffeeMakerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D20872BA411686C7A7F02F0 /* Pods_CoffeeMakerTests.framework */; };
@@ -128,10 +129,11 @@
 		7CE901F2ECBA63608CECE0F2 /* Pods-CoffeeMaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeMaker.release.xcconfig"; path = "Target Support Files/Pods-CoffeeMaker/Pods-CoffeeMaker.release.xcconfig"; sourceTree = "<group>"; };
 		89065B775F6128E5762AB1C1 /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B9FC371D486F98496BEF9BA /* Pods-CoffeeMakerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeMakerTests.release.xcconfig"; path = "Target Support Files/Pods-CoffeeMakerTests/Pods-CoffeeMakerTests.release.xcconfig"; sourceTree = "<group>"; };
+		A20B8221257A76C800FEA9E4 /* Coffee+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coffee+Utils.swift"; sourceTree = "<group>"; };
+		A20B8236257A862E00FEA9E4 /* CoffeeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeUseCase.swift; sourceTree = "<group>"; };
 		A2576DBB256BA1B100B1EF86 /* CoffeeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeRepository.swift; sourceTree = "<group>"; };
 		A2576DC4256BC2D800B1EF86 /* CoreDataCoffeeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataCoffeeRepository.swift; sourceTree = "<group>"; };
-		A2576DD8256BC7E000B1EF86 /* CoreDataPublishersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPublishersProvider.swift; sourceTree = "<group>"; };
-		A2B17A912570E182003B346F /* FetchedResultsController+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FetchedResultsController+Combine.swift"; sourceTree = "<group>"; };
+		A2B17A912570E182003B346F /* CoreDataEntitiesPublisherProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEntitiesPublisherProvider.swift; sourceTree = "<group>"; };
 		A2B17A992570F3B4003B346F /* CoreDataEntitiesPublisherProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEntitiesPublisherProviderTests.swift; sourceTree = "<group>"; };
 		A2B17AA1257121D4003B346F /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
 		A2D2EF52256696B3004A9E97 /* CoffeeListConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeListConnector.swift; sourceTree = "<group>"; };
@@ -167,7 +169,7 @@
 		A2EFC681255EB93900D9E93F /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
 		A2EFC687255EB99500D9E93F /* GetAllCoffees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCoffees.swift; sourceTree = "<group>"; };
 		A2EFC68D255EB99F00D9E93F /* AddCoffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoffee.swift; sourceTree = "<group>"; };
-		A2EFC693255EB9A700D9E93F /* RemoveCoffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveCoffee.swift; sourceTree = "<group>"; };
+		A2EFC693255EB9A700D9E93F /* DeleteCoffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteCoffee.swift; sourceTree = "<group>"; };
 		A2EFC699255EBA1500D9E93F /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		A2EFC6B4255EC41300D9E93F /* CoffeesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeesList.swift; sourceTree = "<group>"; };
 		A2EFC6BE255EC4F400D9E93F /* CoffeesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeesListViewModel.swift; sourceTree = "<group>"; };
@@ -240,14 +242,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A20B8220257A76AD00FEA9E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A20B8221257A76C800FEA9E4 /* Coffee+Utils.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A20B8235257A861F00FEA9E4 /* Coffee */ = {
+			isa = PBXGroup;
+			children = (
+				A20B8236257A862E00FEA9E4 /* CoffeeUseCase.swift */,
+			);
+			path = Coffee;
+			sourceTree = "<group>";
+		};
 		A2576D9F256B9B3200B1EF86 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				A20B8220257A76AD00FEA9E4 /* Models */,
 				A2B17A902570E0B3003B346F /* Combine */,
 				A2576DC3256BC2CA00B1EF86 /* Repositories */,
 				A2EFC5FF255EB19700D9E93F /* CoreDataStack.swift */,
 				A2EFC601255EB19700D9E93F /* CoffeeMaker.xcdatamodeld */,
-				A2576DD8256BC7E000B1EF86 /* CoreDataPublishersProvider.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -271,7 +289,7 @@
 		A2B17A902570E0B3003B346F /* Combine */ = {
 			isa = PBXGroup;
 			children = (
-				A2B17A912570E182003B346F /* FetchedResultsController+Combine.swift */,
+				A2B17A912570E182003B346F /* CoreDataEntitiesPublisherProvider.swift */,
 			);
 			path = Combine;
 			sourceTree = "<group>";
@@ -410,9 +428,10 @@
 		A2EFC680255EB92B00D9E93F /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				A20B8235257A861F00FEA9E4 /* Coffee */,
 				A2EFC68D255EB99F00D9E93F /* AddCoffee.swift */,
 				A2EFC687255EB99500D9E93F /* GetAllCoffees.swift */,
-				A2EFC693255EB9A700D9E93F /* RemoveCoffee.swift */,
+				A2EFC693255EB9A700D9E93F /* DeleteCoffee.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -823,10 +842,10 @@
 			files = (
 				A2D2EF9425669899004A9E97 /* ImageStorageError.swift in Sources */,
 				A2576DA6256B9B4A00B1EF86 /* CoffeeMaker.xcdatamodeld in Sources */,
-				A2B17A922570E182003B346F /* FetchedResultsController+Combine.swift in Sources */,
+				A2B17A922570E182003B346F /* CoreDataEntitiesPublisherProvider.swift in Sources */,
+				A20B8222257A76C800FEA9E4 /* Coffee+Utils.swift in Sources */,
 				A2D2EFA42566990D004A9E97 /* ImageStorage.swift in Sources */,
 				A2576DAD256B9B6300B1EF86 /* CoreDataStack.swift in Sources */,
-				A2576DD9256BC7E000B1EF86 /* CoreDataPublishersProvider.swift in Sources */,
 				A2D2EF8C25669859004A9E97 /* ImageSaver.swift in Sources */,
 				A2576DC5256BC2D800B1EF86 /* CoreDataCoffeeRepository.swift in Sources */,
 				A2D2EF9C256698D3004A9E97 /* ImageLoader.swift in Sources */,
@@ -875,10 +894,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2576DBC256BA1B100B1EF86 /* CoffeeRepository.swift in Sources */,
+				A20B8237257A862E00FEA9E4 /* CoffeeUseCase.swift in Sources */,
 				A2EFC688255EB99500D9E93F /* GetAllCoffees.swift in Sources */,
 				A2EFC68E255EB99F00D9E93F /* AddCoffee.swift in Sources */,
 				A2EFC682255EB93900D9E93F /* Coffee.swift in Sources */,
-				A2EFC694255EB9A700D9E93F /* RemoveCoffee.swift in Sources */,
+				A2EFC694255EB9A700D9E93F /* DeleteCoffee.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
