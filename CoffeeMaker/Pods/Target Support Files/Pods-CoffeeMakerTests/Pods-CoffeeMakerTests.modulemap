@@ -1,6 +1,0 @@
-framework module Pods_CoffeeMakerTests {
-  umbrella header "Pods-CoffeeMakerTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

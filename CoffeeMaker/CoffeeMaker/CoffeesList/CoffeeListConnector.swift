@@ -16,11 +16,29 @@ final class CoffeeListConnector {
         let repository = CoreDataCoffeeRepository()
         let coffeeUseCase = CoffeeUseCase(coffeeRepository: repository)
 
-        let viewModel = CoffeesListViewModel(
-            getAllCofffees: coffeeUseCase,
-            addCoffee: coffeeUseCase,
-            deleteCoffee: coffeeUseCase
+        let viewModel = CoffeesListViewModel(dependencies:
+                                                .init(
+                                                    getAllCofffees: coffeeUseCase,
+                                                    deleteCoffee: coffeeUseCase,
+                                                    connector: self
+                                                )
         )
         return CoffeesList(viewModel: viewModel)
+    }
+
+    func addCoffeeView() -> AddCoffeeView {
+        let repository = CoreDataCoffeeRepository()
+        let coffeeUseCase = CoffeeUseCase(coffeeRepository: repository)
+
+        let viewModel = AddCoffeeViewModel(dependencies:
+                                            .init(
+                                                addCoffee: coffeeUseCase
+                                            )
+        )
+        return AddCoffeeView(viewModel: viewModel)
+    }
+
+    func dismiss() {
+        
     }
 }

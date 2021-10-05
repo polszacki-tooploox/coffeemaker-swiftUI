@@ -13,13 +13,11 @@ extension Coffee: Identifiable {
 }
 
 struct CoffeesList: View {
-
     @ObservedObject private var viewModel: CoffeesListViewModel
 
     init(viewModel: CoffeesListViewModel) {
       self.viewModel = viewModel
     }
-
 
     var body: some View {
         NavigationView {
@@ -34,14 +32,20 @@ struct CoffeesList: View {
                             Text(item.name)
                                 .padding([.leading, .trailing], 10.0)
                         }
-                    })
+                    }).onDelete(perform: delete)
                 }
-
-
-                Button("Add coffee", action: {})
-                .navigationTitle(viewModel.title)
+                NavigationLink(
+                    destination: viewModel.addCoffeeView) {
+                    Text("Add coffee")
+                }
             }
+            .navigationTitle(viewModel.title)
         }
+    }
+
+    private func delete(offsets: IndexSet) {
+        viewModel.dele
+        .remove(atOffsets: offsets)
     }
 }
 

@@ -13,23 +13,34 @@ final class CoffeesListViewModel: ObservableObject, Identifiable {
     @Published var title: String = "Your coffees"
     @Published var dataSource: [Coffee] = []
 
-    private let getAllCofffees: GetAllCoffees
-    private let addCoffee: AddCoffee
-    private let deleteCoffee: DeleteCoffee
-    private var disposables = Set<AnyCancellable>()
+    var addCoffeeView: AddCoffeeView {
+        return dependencies.connector.addCoffeeView()
+    }
 
-    init(getAllCofffees: GetAllCoffees,
-         addCoffee: AddCoffee,
-         deleteCoffee: DeleteCoffee) {
-        self.getAllCofffees = getAllCofffees
-        self.addCoffee = addCoffee
-        self.deleteCoffee = deleteCoffee
+    struct Dependencies {
+        let getAllCofffees: GetAllCoffees
+        let deleteCoffee: DeleteCoffee
+        let connector: CoffeeListConnector
+    }
+
+    private var disposables = Set<AnyCancellable>()
+    private let dependencies: Dependencies
+
+    init(dependencies: Dependencies) {
+        self.dependencies = dependencies
 
         setupBinding()
     }
 
     private func setupBinding() {
         // TODO: Handle error
-        disposables.insert(getAllCofffees.get().assertNoFailure().assign(to: \.dataSource, on: self))
+        disposables.insert(dependencies.getAllCofffees.get().assertNoFailure().assign(to: \.dataSource, on: self))
+    }
+
+    func deleteItems(indices: IndexSet) {
+        indices.forEach {
+            let coffee = dataSource[$0]
+            dependencies.deleteCoffee.delete(coffee: coffee)
+        }
     }
 }
