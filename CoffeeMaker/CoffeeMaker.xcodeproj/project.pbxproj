@@ -15,6 +15,10 @@
 		A2576DAD256B9B6300B1EF86 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EFC5FF255EB19700D9E93F /* CoreDataStack.swift */; };
 		A2576DBC256BA1B100B1EF86 /* CoffeeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2576DBB256BA1B100B1EF86 /* CoffeeRepository.swift */; };
 		A2576DC5256BC2D800B1EF86 /* CoreDataCoffeeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2576DC4256BC2D800B1EF86 /* CoreDataCoffeeRepository.swift */; };
+		A2A9DF9F270C5120006B1E60 /* GetSelectedCoffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9DF9E270C5120006B1E60 /* GetSelectedCoffee.swift */; };
+		A2A9DFA1270C512A006B1E60 /* SetSelectedCoffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9DFA0270C512A006B1E60 /* SetSelectedCoffee.swift */; };
+		A2A9DFA3270C532E006B1E60 /* SelectedCoffeeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9DFA2270C532E006B1E60 /* SelectedCoffeeRepository.swift */; };
+		A2A9DFA5270C5DE3006B1E60 /* UserDefaultsSelectedCoffeeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9DFA4270C5DE3006B1E60 /* UserDefaultsSelectedCoffeeRepository.swift */; };
 		A2B17A922570E182003B346F /* CoreDataEntitiesPublisherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B17A912570E182003B346F /* CoreDataEntitiesPublisherProvider.swift */; };
 		A2B17A9A2570F3B4003B346F /* CoreDataEntitiesPublisherProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B17A992570F3B4003B346F /* CoreDataEntitiesPublisherProviderTests.swift */; };
 		A2B17AA2257121D4003B346F /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B17AA1257121D4003B346F /* TestCoreDataStack.swift */; };
@@ -127,6 +131,10 @@
 		A24321D125821E9900863C71 /* AddCoffeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoffeeViewModel.swift; sourceTree = "<group>"; };
 		A2576DBB256BA1B100B1EF86 /* CoffeeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeRepository.swift; sourceTree = "<group>"; };
 		A2576DC4256BC2D800B1EF86 /* CoreDataCoffeeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataCoffeeRepository.swift; sourceTree = "<group>"; };
+		A2A9DF9E270C5120006B1E60 /* GetSelectedCoffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSelectedCoffee.swift; sourceTree = "<group>"; };
+		A2A9DFA0270C512A006B1E60 /* SetSelectedCoffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSelectedCoffee.swift; sourceTree = "<group>"; };
+		A2A9DFA2270C532E006B1E60 /* SelectedCoffeeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCoffeeRepository.swift; sourceTree = "<group>"; };
+		A2A9DFA4270C5DE3006B1E60 /* UserDefaultsSelectedCoffeeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsSelectedCoffeeRepository.swift; sourceTree = "<group>"; };
 		A2B17A912570E182003B346F /* CoreDataEntitiesPublisherProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEntitiesPublisherProvider.swift; sourceTree = "<group>"; };
 		A2B17A992570F3B4003B346F /* CoreDataEntitiesPublisherProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEntitiesPublisherProviderTests.swift; sourceTree = "<group>"; };
 		A2B17AA1257121D4003B346F /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
@@ -240,6 +248,8 @@
 				A2EFC687255EB99500D9E93F /* GetAllCoffees.swift */,
 				A2EFC693255EB9A700D9E93F /* DeleteCoffee.swift */,
 				A20B8236257A862E00FEA9E4 /* CoffeeUseCase.swift */,
+				A2A9DF9E270C5120006B1E60 /* GetSelectedCoffee.swift */,
+				A2A9DFA0270C512A006B1E60 /* SetSelectedCoffee.swift */,
 			);
 			path = Coffee;
 			sourceTree = "<group>";
@@ -269,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				A2576DBB256BA1B100B1EF86 /* CoffeeRepository.swift */,
+				A2A9DFA2270C532E006B1E60 /* SelectedCoffeeRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -277,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				A2576DC4256BC2D800B1EF86 /* CoreDataCoffeeRepository.swift */,
+				A2A9DFA4270C5DE3006B1E60 /* UserDefaultsSelectedCoffeeRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -712,6 +724,7 @@
 				A2D2EF9425669899004A9E97 /* ImageStorageError.swift in Sources */,
 				A2576DA6256B9B4A00B1EF86 /* CoffeeMaker.xcdatamodeld in Sources */,
 				A2B17A922570E182003B346F /* CoreDataEntitiesPublisherProvider.swift in Sources */,
+				A2A9DFA5270C5DE3006B1E60 /* UserDefaultsSelectedCoffeeRepository.swift in Sources */,
 				A20B8222257A76C800FEA9E4 /* Coffee+Utils.swift in Sources */,
 				A2D2EFA42566990D004A9E97 /* ImageStorage.swift in Sources */,
 				A2576DAD256B9B6300B1EF86 /* CoreDataStack.swift in Sources */,
@@ -764,12 +777,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2A9DFA3270C532E006B1E60 /* SelectedCoffeeRepository.swift in Sources */,
 				A2576DBC256BA1B100B1EF86 /* CoffeeRepository.swift in Sources */,
 				A20B8237257A862E00FEA9E4 /* CoffeeUseCase.swift in Sources */,
 				A2EFC688255EB99500D9E93F /* GetAllCoffees.swift in Sources */,
+				A2A9DF9F270C5120006B1E60 /* GetSelectedCoffee.swift in Sources */,
 				A2EFC68E255EB99F00D9E93F /* AddCoffee.swift in Sources */,
 				A2EFC682255EB93900D9E93F /* Coffee.swift in Sources */,
 				A2EFC694255EB9A700D9E93F /* DeleteCoffee.swift in Sources */,
+				A2A9DFA1270C512A006B1E60 /* SetSelectedCoffee.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

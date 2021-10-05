@@ -23,7 +23,7 @@ struct CoffeesList: View {
         NavigationView {
             VStack {
                 List {
-                    ForEach(viewModel.dataSource, content: { item in
+                    ForEach(viewModel.coffees, content: { item in
                         HStack {
                             Image(systemName: "airplayvideo")
                                 .frame(width: 45.0, height: 45.0, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
@@ -39,7 +39,6 @@ struct CoffeesList: View {
                     Text("Add coffee")
                 }
             }
-            .navigationTitle(viewModel.title)
         }
     }
 

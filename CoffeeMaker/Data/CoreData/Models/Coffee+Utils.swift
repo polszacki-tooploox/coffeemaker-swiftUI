@@ -10,7 +10,7 @@ import Domain
 import CoreData
 
 extension Coffee {
-    var domainCoffee: Domain.Coffee { Domain.Coffee(name: name ?? "", imagePath: imageURL?.absoluteString) }
+    var domainCoffee: Domain.Coffee { Domain.Coffee(id: id ?? UUID().uuidString, name: name ?? "", imagePath: imageURL?.absoluteString) }
 }
 
 extension Domain.Coffee {

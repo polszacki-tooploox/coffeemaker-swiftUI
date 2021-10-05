@@ -13,12 +13,18 @@ import Data
 final class CoffeeListConnector {
 
     func coffeeListView() -> CoffeesList {
-        let repository = CoreDataCoffeeRepository()
-        let coffeeUseCase = CoffeeUseCase(coffeeRepository: repository)
+        let coffeeRepository = CoreDataCoffeeRepository()
+        let selectedCoffeeRepository = UserDefaultsSelectedCoffeeRepository()
+        let coffeeUseCase = CoffeeUseCase(
+            coffeeRepository: coffeeRepository,
+            selectedCoffeeRepository: selectedCoffeeRepository
+        )
 
         let viewModel = CoffeesListViewModel(dependencies:
                                                 .init(
                                                     getAllCofffees: coffeeUseCase,
+                                                    getSelectedCoffee: coffeeUseCase,
+                                                    setSelectedCoffee: coffeeUseCase,
                                                     deleteCoffee: coffeeUseCase,
                                                     connector: self
                                                 )
@@ -27,8 +33,12 @@ final class CoffeeListConnector {
     }
 
     func addCoffeeView() -> AddCoffeeView {
-        let repository = CoreDataCoffeeRepository()
-        let coffeeUseCase = CoffeeUseCase(coffeeRepository: repository)
+        let coffeeRepository = CoreDataCoffeeRepository()
+        let selectedCoffeeRepository = UserDefaultsSelectedCoffeeRepository()
+        let coffeeUseCase = CoffeeUseCase(
+            coffeeRepository: coffeeRepository,
+            selectedCoffeeRepository: selectedCoffeeRepository
+        )
 
         let viewModel = AddCoffeeViewModel(dependencies:
                                             .init(
