@@ -44,8 +44,7 @@ struct CoffeesList: View {
     }
 
     private func delete(offsets: IndexSet) {
-        viewModel.dele
-        .remove(atOffsets: offsets)
+        viewModel.deleteItems(indices: offsets)
     }
 }
 
