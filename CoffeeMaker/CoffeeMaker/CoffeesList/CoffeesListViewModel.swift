@@ -10,7 +10,6 @@ import Domain
 
 final class CoffeesListViewModel: ObservableObject, Identifiable {
 
-    @Published var selectedCoffee: Coffee?
     @Published var coffees: [Coffee] = []
 
     var addCoffeeView: AddCoffeeView {

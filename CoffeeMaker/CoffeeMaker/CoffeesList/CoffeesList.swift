@@ -8,9 +8,7 @@
 import SwiftUI
 import Domain
 
-extension Coffee: Identifiable {
-    public var id: String { name }
-}
+extension Coffee: Identifiable {}
 
 struct CoffeesList: View {
     @ObservedObject private var viewModel: CoffeesListViewModel
@@ -22,6 +20,7 @@ struct CoffeesList: View {
     var body: some View {
         NavigationView {
             VStack {
+                
                 List {
                     ForEach(viewModel.coffees, content: { item in
                         HStack {
@@ -49,6 +48,9 @@ struct CoffeesList: View {
 
 struct CoffeesList_Previews: PreviewProvider {
     static var previews: some View {
-        CoffeeListConnector().coffeeListView()
+        Group {
+            CoffeeListConnector().coffeeListView()
+            CoffeeListConnector().coffeeListView()
+        }
     }
 }
