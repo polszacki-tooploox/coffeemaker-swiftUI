@@ -19,11 +19,11 @@ public final class CoffeeUseCase: AddCoffee, DeleteCoffee, GetAllCoffees, GetSel
         self.selectedCoffeeRepository = selectedCoffeeRepository
     }
 
-    public func add(coffee: Coffee) -> AnyPublisher<Never, Error> {
+    public func add(coffee: Coffee) -> AnyPublisher<Void, Error> {
         coffeeRepository.addCoffee(coffee: coffee)
     }
 
-    public func delete(coffee: Coffee) -> AnyPublisher<Never, Error> {
+    public func delete(coffee: Coffee) -> AnyPublisher<Void, Error> {
         coffeeRepository.deleteCoffee(coffee: coffee)
     }
 

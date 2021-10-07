@@ -9,5 +9,5 @@ import Foundation
 import Combine
 
 public protocol AddCoffee {
-    func add(coffee: Coffee) -> AnyPublisher<Never, Error>
+    func add(coffee: Coffee) -> AnyPublisher<Void, Error>
 }

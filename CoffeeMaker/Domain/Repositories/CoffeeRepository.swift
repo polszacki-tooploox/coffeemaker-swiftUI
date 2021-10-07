@@ -10,6 +10,6 @@ import Combine
 
 public protocol CoffeeRepository {
     func getAllCoffees() -> AnyPublisher<[Coffee], Error>
-    func addCoffee(coffee: Coffee) -> AnyPublisher<Never, Error>
-    func deleteCoffee(coffee: Coffee) -> AnyPublisher<Never, Error>
+    func addCoffee(coffee: Coffee) -> AnyPublisher<Void, Error>
+    func deleteCoffee(coffee: Coffee) -> AnyPublisher<Void, Error>
 }

@@ -19,15 +19,21 @@ struct ActiveCoffeeView: View {
         VStack {
             HStack(alignment: .bottom) {
                 VStack(alignment: .leading, spacing: 10.0) {
-                    Text(viewModel.selectedCoffee?.name ?? "Test coffee").font(.headline)
-                    Text("Bonanza").font(.caption)
-                    Text("Last shot: 16g/32g 28s").font(.caption2)
+                    Text(viewModel.name).font(.headline)
+                    Text(viewModel.roasteryName).font(.caption)
+                    Text(viewModel.lastBrewText).font(.caption2)
                 }
                 Image("arrow")
                     .resizable()
                     .frame(width: 30.0, height: 30.0)
             }
         }
+        .gesture(
+            TapGesture()
+                .onEnded {
+                    viewModel.onTapped()
+                }
+        )
         .padding()
         .background(Color.darkBackground)
         .cornerRadius(15.0)
@@ -36,7 +42,10 @@ struct ActiveCoffeeView: View {
 
 struct ActiveCoffeeView_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = ActiveCoffeeViewModel()
+        let getSelectedCoffee = MockedCoffeeUseCase()
+        let viewModel = ActiveCoffeeViewModel(
+            getSelectedCoffee: getSelectedCoffee
+        )
         return ActiveCoffeeView(viewModel: viewModel)
     }
 }

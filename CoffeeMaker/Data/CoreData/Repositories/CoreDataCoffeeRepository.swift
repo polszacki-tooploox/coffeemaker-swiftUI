@@ -38,19 +38,19 @@ public final class CoreDataCoffeeRepository: CoffeeRepository {
         }.eraseToAnyPublisher()
     }
 
-    public func addCoffee(coffee: Domain.Coffee) -> AnyPublisher<Never, Error> {
+    public func addCoffee(coffee: Domain.Coffee) -> AnyPublisher<Void, Error> {
         do {
             _ = try coffee.dataCoffee(context: context)
-            return Empty().eraseToAnyPublisher()
+            return Just(()).setFailureType(to: Error.self).eraseToAnyPublisher()
         } catch {
             return Fail(error: error).eraseToAnyPublisher()
         }
     }
 
-    public func deleteCoffee(coffee: Domain.Coffee) -> AnyPublisher<Never, Error> {
+    public func deleteCoffee(coffee: Domain.Coffee) -> AnyPublisher<Void, Error> {
         do {
             _ = try coffee.dataCoffee(context: context)
-            return Empty().eraseToAnyPublisher()
+            return Just(()).setFailureType(to: Error.self).eraseToAnyPublisher()
         } catch {
             return Fail(error: error).eraseToAnyPublisher()
         }

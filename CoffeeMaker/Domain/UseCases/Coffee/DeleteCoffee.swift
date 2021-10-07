@@ -9,5 +9,5 @@ import Foundation
 import Combine
 
 public protocol DeleteCoffee {
-    func delete(coffee: Coffee) -> AnyPublisher<Never, Error>
+    func delete(coffee: Coffee) -> AnyPublisher<Void, Error>
 }

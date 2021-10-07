@@ -24,6 +24,8 @@
 		A2A9DFAD270C7D83006B1E60 /* Color+CoffeeMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9DFAC270C7D83006B1E60 /* Color+CoffeeMaker.swift */; };
 		A2A9DFB0270EBA44006B1E60 /* CoffeeBrewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9DFAF270EBA44006B1E60 /* CoffeeBrewing.swift */; };
 		A2A9DFB2270ECFB1006B1E60 /* CoffeeBrewing+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9DFB1270ECFB1006B1E60 /* CoffeeBrewing+Mapping.swift */; };
+		A2A9DFB8270EFC2A006B1E60 /* MockedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9DFB4270EF7A0006B1E60 /* MockedModels.swift */; };
+		A2A9DFB9270EFC35006B1E60 /* MockedUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9DFB6270EF7AB006B1E60 /* MockedUseCases.swift */; };
 		A2B17A922570E182003B346F /* CoreDataEntitiesPublisherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B17A912570E182003B346F /* CoreDataEntitiesPublisherProvider.swift */; };
 		A2B17A9A2570F3B4003B346F /* CoreDataEntitiesPublisherProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B17A992570F3B4003B346F /* CoreDataEntitiesPublisherProviderTests.swift */; };
 		A2B17AA2257121D4003B346F /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B17AA1257121D4003B346F /* TestCoreDataStack.swift */; };
@@ -145,6 +147,8 @@
 		A2A9DFAC270C7D83006B1E60 /* Color+CoffeeMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+CoffeeMaker.swift"; sourceTree = "<group>"; };
 		A2A9DFAF270EBA44006B1E60 /* CoffeeBrewing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeBrewing.swift; sourceTree = "<group>"; };
 		A2A9DFB1270ECFB1006B1E60 /* CoffeeBrewing+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoffeeBrewing+Mapping.swift"; sourceTree = "<group>"; };
+		A2A9DFB4270EF7A0006B1E60 /* MockedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedModels.swift; sourceTree = "<group>"; };
+		A2A9DFB6270EF7AB006B1E60 /* MockedUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedUseCases.swift; sourceTree = "<group>"; };
 		A2B17A912570E182003B346F /* CoreDataEntitiesPublisherProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEntitiesPublisherProvider.swift; sourceTree = "<group>"; };
 		A2B17A992570F3B4003B346F /* CoreDataEntitiesPublisherProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEntitiesPublisherProviderTests.swift; sourceTree = "<group>"; };
 		A2B17AA1257121D4003B346F /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
@@ -321,6 +325,15 @@
 			path = Style;
 			sourceTree = "<group>";
 		};
+		A2A9DFB3270EF795006B1E60 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A2A9DFB4270EF7A0006B1E60 /* MockedModels.swift */,
+				A2A9DFB6270EF7AB006B1E60 /* MockedUseCases.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		A2B17A902570E0B3003B346F /* Combine */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +421,7 @@
 		A2EFC5FC255EB19700D9E93F /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				A2A9DFB3270EF795006B1E60 /* Mocks */,
 				A2EFC5FD255EB19700D9E93F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -786,9 +800,11 @@
 				A2EFC6B5255EC41300D9E93F /* CoffeesList.swift in Sources */,
 				A24321D225821E9900863C71 /* AddCoffeeViewModel.swift in Sources */,
 				A2EFC6BF255EC4F400D9E93F /* CoffeesListViewModel.swift in Sources */,
+				A2A9DFB8270EFC2A006B1E60 /* MockedModels.swift in Sources */,
 				A2A9DFA7270C7C7D006B1E60 /* ActiveCoffeeView.swift in Sources */,
 				A2EFC5F7255EB19500D9E93F /* CoffeeMakerApp.swift in Sources */,
 				A2D2EF53256696B3004A9E97 /* CoffeeListConnector.swift in Sources */,
+				A2A9DFB9270EFC35006B1E60 /* MockedUseCases.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
