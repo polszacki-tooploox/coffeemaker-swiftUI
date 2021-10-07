@@ -7,6 +7,7 @@
 
 import Combine
 import Domain
+import UIKit
 
 final class CoffeesListViewModel: ObservableObject, Identifiable {
 

@@ -13,14 +13,19 @@ extension Coffee: Identifiable {}
 struct CoffeesList: View {
     @ObservedObject private var viewModel: CoffeesListViewModel
 
-    init(viewModel: CoffeesListViewModel) {
-      self.viewModel = viewModel
+    private let activeCoffeeViewModel: ActiveCoffeeViewModel
+
+    init(viewModel: CoffeesListViewModel, activeCoffeeViewModel: ActiveCoffeeViewModel) {
+        self.viewModel = viewModel
+        self.activeCoffeeViewModel = activeCoffeeViewModel
     }
 
     var body: some View {
         NavigationView {
             VStack {
-                
+                ActiveCoffeeView(viewModel: activeCoffeeViewModel)
+                    .padding()
+                    .frame(height: 150.0, alignment: .center)
                 List {
                     ForEach(viewModel.coffees, content: { item in
                         HStack {
@@ -38,6 +43,14 @@ struct CoffeesList: View {
                     Text("Add coffee")
                 }
             }
+            .navigationBarTitleDisplayMode(.inline)
+            .background(NavigationBarConfigurator { vc in
+                let navBarAppearance = UINavigationBarAppearance()
+                navBarAppearance.backgroundColor = .white
+                navBarAppearance.shadowColor = nil
+                navBarAppearance.shadowImage = nil
+                vc.navigationBar.standardAppearance = navBarAppearance
+            })
         }
     }
 
@@ -48,9 +61,19 @@ struct CoffeesList: View {
 
 struct CoffeesList_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            CoffeeListConnector().coffeeListView()
-            CoffeeListConnector().coffeeListView()
-        }
+        let mockUseCase = MockedCoffeeUseCase()
+        let viewModel = CoffeesListViewModel(dependencies:
+                                                .init(
+                                                    getAllCofffees: mockUseCase,
+                                                    getSelectedCoffee: mockUseCase,
+                                                    setSelectedCoffee: mockUseCase,
+                                                    deleteCoffee: mockUseCase,
+                                                    connector: CoffeeListConnector()
+                                                )
+        )
+
+        let activeCoffeeViewModel = ActiveCoffeeViewModel(getSelectedCoffee: mockUseCase)
+        CoffeesList(viewModel: viewModel, activeCoffeeViewModel: activeCoffeeViewModel)
+            .previewDevice("iPhone 12 Pro")
     }
 }

@@ -20,13 +20,24 @@ struct ActiveCoffeeView: View {
             HStack(alignment: .bottom) {
                 VStack(alignment: .leading, spacing: 10.0) {
                     Text(viewModel.name).font(.headline)
+                        .font(.defaultFont(size: 25.0, weight: .semibold))
+                        .foregroundColor(.white)
                     Text(viewModel.roasteryName).font(.caption)
+                        .font(.defaultFont(size: 16.0, weight: .regular))
+                        .foregroundColor(.white)
+                    Spacer()
                     Text(viewModel.lastBrewText).font(.caption2)
+                        .font(.defaultFont(size: 14.0, weight: .regular))
+                        .foregroundColor(.white.opacity(0.8))
                 }
+                Spacer()
                 Image("arrow")
+                    .renderingMode(.template)
                     .resizable()
                     .frame(width: 30.0, height: 30.0)
+                    .foregroundColor(.white)
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .gesture(
             TapGesture()
@@ -34,6 +45,7 @@ struct ActiveCoffeeView: View {
                     viewModel.onTapped()
                 }
         )
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding()
         .background(Color.darkBackground)
         .cornerRadius(15.0)
@@ -47,5 +59,6 @@ struct ActiveCoffeeView_Previews: PreviewProvider {
             getSelectedCoffee: getSelectedCoffee
         )
         return ActiveCoffeeView(viewModel: viewModel)
+            .previewLayout(.fixed(width: /*@START_MENU_TOKEN@*/350.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/150.0/*@END_MENU_TOKEN@*/))
     }
 }

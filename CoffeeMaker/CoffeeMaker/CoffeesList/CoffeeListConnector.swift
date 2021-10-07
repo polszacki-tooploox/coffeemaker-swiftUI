@@ -29,7 +29,9 @@ final class CoffeeListConnector {
                                                     connector: self
                                                 )
         )
-        return CoffeesList(viewModel: viewModel)
+
+        let activeCoffeeViewModel = ActiveCoffeeViewModel(getSelectedCoffee: coffeeUseCase)
+        return CoffeesList(viewModel: viewModel, activeCoffeeViewModel: activeCoffeeViewModel)
     }
 
     func addCoffeeView() -> AddCoffeeView {

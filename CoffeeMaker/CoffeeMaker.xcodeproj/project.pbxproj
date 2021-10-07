@@ -26,6 +26,12 @@
 		A2A9DFB2270ECFB1006B1E60 /* CoffeeBrewing+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9DFB1270ECFB1006B1E60 /* CoffeeBrewing+Mapping.swift */; };
 		A2A9DFB8270EFC2A006B1E60 /* MockedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9DFB4270EF7A0006B1E60 /* MockedModels.swift */; };
 		A2A9DFB9270EFC35006B1E60 /* MockedUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9DFB6270EF7AB006B1E60 /* MockedUseCases.swift */; };
+		A2A9DFBB270F0CF1006B1E60 /* Font+CoffeeMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9DFBA270F0CF1006B1E60 /* Font+CoffeeMaker.swift */; };
+		A2A9DFC2270F0DDD006B1E60 /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A2A9DFBE270F0DDD006B1E60 /* SF-Pro-Display-Light.otf */; };
+		A2A9DFC3270F0DDD006B1E60 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A2A9DFBF270F0DDD006B1E60 /* SF-Pro-Display-Bold.otf */; };
+		A2A9DFC4270F0DDD006B1E60 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A2A9DFC0270F0DDD006B1E60 /* SF-Pro-Display-Regular.otf */; };
+		A2A9DFC5270F0DDD006B1E60 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A2A9DFC1270F0DDD006B1E60 /* SF-Pro-Display-Semibold.otf */; };
+		A2A9DFC7270F26FA006B1E60 /* NavigationBarConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9DFC6270F26FA006B1E60 /* NavigationBarConfigurator.swift */; };
 		A2B17A922570E182003B346F /* CoreDataEntitiesPublisherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B17A912570E182003B346F /* CoreDataEntitiesPublisherProvider.swift */; };
 		A2B17A9A2570F3B4003B346F /* CoreDataEntitiesPublisherProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B17A992570F3B4003B346F /* CoreDataEntitiesPublisherProviderTests.swift */; };
 		A2B17AA2257121D4003B346F /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B17AA1257121D4003B346F /* TestCoreDataStack.swift */; };
@@ -149,6 +155,12 @@
 		A2A9DFB1270ECFB1006B1E60 /* CoffeeBrewing+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoffeeBrewing+Mapping.swift"; sourceTree = "<group>"; };
 		A2A9DFB4270EF7A0006B1E60 /* MockedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedModels.swift; sourceTree = "<group>"; };
 		A2A9DFB6270EF7AB006B1E60 /* MockedUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedUseCases.swift; sourceTree = "<group>"; };
+		A2A9DFBA270F0CF1006B1E60 /* Font+CoffeeMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+CoffeeMaker.swift"; sourceTree = "<group>"; };
+		A2A9DFBE270F0DDD006B1E60 /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
+		A2A9DFBF270F0DDD006B1E60 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		A2A9DFC0270F0DDD006B1E60 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		A2A9DFC1270F0DDD006B1E60 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		A2A9DFC6270F26FA006B1E60 /* NavigationBarConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarConfigurator.swift; sourceTree = "<group>"; };
 		A2B17A912570E182003B346F /* CoreDataEntitiesPublisherProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEntitiesPublisherProvider.swift; sourceTree = "<group>"; };
 		A2B17A992570F3B4003B346F /* CoreDataEntitiesPublisherProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEntitiesPublisherProviderTests.swift; sourceTree = "<group>"; };
 		A2B17AA1257121D4003B346F /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
@@ -321,6 +333,8 @@
 			isa = PBXGroup;
 			children = (
 				A2A9DFAC270C7D83006B1E60 /* Color+CoffeeMaker.swift */,
+				A2A9DFBA270F0CF1006B1E60 /* Font+CoffeeMaker.swift */,
+				A2A9DFC6270F26FA006B1E60 /* NavigationBarConfigurator.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -332,6 +346,26 @@
 				A2A9DFB6270EF7AB006B1E60 /* MockedUseCases.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		A2A9DFBC270F0DC9006B1E60 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A2A9DFBD270F0DD2006B1E60 /* Fonts */,
+				A2EFC5FA255EB19700D9E93F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A2A9DFBD270F0DD2006B1E60 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A2A9DFBF270F0DDD006B1E60 /* SF-Pro-Display-Bold.otf */,
+				A2A9DFBE270F0DDD006B1E60 /* SF-Pro-Display-Light.otf */,
+				A2A9DFC0270F0DDD006B1E60 /* SF-Pro-Display-Regular.otf */,
+				A2A9DFC1270F0DDD006B1E60 /* SF-Pro-Display-Semibold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		A2B17A902570E0B3003B346F /* Combine */ = {
@@ -406,12 +440,12 @@
 		A2EFC5F5255EB19500D9E93F /* CoffeeMaker */ = {
 			isa = PBXGroup;
 			children = (
+				A2A9DFBC270F0DC9006B1E60 /* Resources */,
 				A2A9DFAB270C7D72006B1E60 /* Style */,
 				A2A9DFA8270C7CB9006B1E60 /* ActiveCoffee */,
 				A20B8250257A8D9500FEA9E4 /* AddCoffee */,
 				A2EFC6B3255EC40200D9E93F /* CoffeesList */,
 				A2EFC5F6255EB19500D9E93F /* CoffeeMakerApp.swift */,
-				A2EFC5FA255EB19700D9E93F /* Assets.xcassets */,
 				A2EFC604255EB19700D9E93F /* Info.plist */,
 				A2EFC5FC255EB19700D9E93F /* Preview Content */,
 			);
@@ -726,7 +760,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2A9DFC5270F0DDD006B1E60 /* SF-Pro-Display-Semibold.otf in Resources */,
 				A2EFC5FE255EB19700D9E93F /* Preview Assets.xcassets in Resources */,
+				A2A9DFC2270F0DDD006B1E60 /* SF-Pro-Display-Light.otf in Resources */,
+				A2A9DFC3270F0DDD006B1E60 /* SF-Pro-Display-Bold.otf in Resources */,
+				A2A9DFC4270F0DDD006B1E60 /* SF-Pro-Display-Regular.otf in Resources */,
 				A2EFC5FB255EB19700D9E93F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -801,6 +839,8 @@
 				A24321D225821E9900863C71 /* AddCoffeeViewModel.swift in Sources */,
 				A2EFC6BF255EC4F400D9E93F /* CoffeesListViewModel.swift in Sources */,
 				A2A9DFB8270EFC2A006B1E60 /* MockedModels.swift in Sources */,
+				A2A9DFBB270F0CF1006B1E60 /* Font+CoffeeMaker.swift in Sources */,
+				A2A9DFC7270F26FA006B1E60 /* NavigationBarConfigurator.swift in Sources */,
 				A2A9DFA7270C7C7D006B1E60 /* ActiveCoffeeView.swift in Sources */,
 				A2EFC5F7255EB19500D9E93F /* CoffeeMakerApp.swift in Sources */,
 				A2D2EF53256696B3004A9E97 /* CoffeeListConnector.swift in Sources */,
