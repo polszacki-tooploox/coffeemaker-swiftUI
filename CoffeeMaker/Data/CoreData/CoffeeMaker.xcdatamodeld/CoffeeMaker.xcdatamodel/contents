@@ -4,8 +4,19 @@
         <attribute name="id" attributeType="String"/>
         <attribute name="imageURL" optional="YES" attributeType="URI"/>
         <attribute name="name" attributeType="String"/>
+        <attribute name="roasteryName" optional="YES" attributeType="String"/>
+        <relationship name="brewings" toMany="YES" deletionRule="Cascade" destinationEntity="CoffeeBrewing"/>
+    </entity>
+    <entity name="CoffeeBrewing" representedClassName="CoffeeBrewing" syncable="YES" codeGenerationType="class">
+        <attribute name="brewingTime" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="gramsIn" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="gramsOut" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="temperature" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="Coffee" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="Coffee" positionX="-407.4600219726562" positionY="-50.489990234375" width="128" height="118"/>
+        <element name="CoffeeBrewing" positionX="-63" positionY="9" width="128" height="119"/>
     </elements>
 </model>
