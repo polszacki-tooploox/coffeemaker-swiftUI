@@ -13,7 +13,7 @@ extension Coffee {
         Coffee(
             id: UUID().uuidString,
             name: "Brazil test coffee",
-            roasteryName: "MOCK ROAST",
+            roasteryName: "Mock Roast",
             imagePath: nil,
             brewings: [CoffeeBrewing.mocked]
         )

@@ -20,37 +20,40 @@ struct CoffeesList: View {
         self.activeCoffeeViewModel = activeCoffeeViewModel
     }
 
+    private var contentView: some View {
+        VStack {
+            ActiveCoffeeView(viewModel: activeCoffeeViewModel)
+                .padding()
+                .frame(height: 150.0, alignment: .center)
+            List {
+                ForEach(viewModel.coffees, content: { item in
+                    CoffeesListCell(coffee: item)
+                        .cornerRadius(14.0)
+                }).onDelete(perform: delete)
+                    .listRowBackground(Color.clear)
+                    .listRowInsets(EdgeInsets())
+            }
+            .listRowSeparator(.hidden)
+            .padding()
+            Button(action: {}) {
+                Text("Add coffee")
+                    .font(Font.defaultFont(size: 20.0, weight: .semibold))
+                    .frame(maxWidth: 200)
+            }
+            .buttonStyle(.borderedProminent)
+            .controlSize(.large)
+            .tint(Color.darkAccent)
+        }
+    }
+
     var body: some View {
         NavigationView {
-            VStack {
-                ActiveCoffeeView(viewModel: activeCoffeeViewModel)
-                    .padding()
-                    .frame(height: 150.0, alignment: .center)
-                List {
-                    ForEach(viewModel.coffees, content: { item in
-                        HStack {
-                            Image(systemName: "airplayvideo")
-                                .frame(width: 45.0, height: 45.0, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
-                                .cornerRadius(5.0)
-                            Text(item.name)
-                                .padding([.leading, .trailing], 10.0)
-                        }
-                    }).onDelete(perform: delete)
-                }
-                NavigationLink(
-                    destination: viewModel.addCoffeeView) {
-                    Text("Add coffee")
-                }
+            ZStack {
+                Color.lightBackground
+                    .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                contentView
             }
-            .navigationBarTitleDisplayMode(.inline)
-            .background(NavigationBarConfigurator { vc in
-                let navBarAppearance = UINavigationBarAppearance()
-                navBarAppearance.backgroundColor = .white
-                navBarAppearance.shadowColor = nil
-                navBarAppearance.shadowImage = nil
-                vc.navigationBar.standardAppearance = navBarAppearance
-            })
+            .navigationBarTitleHidden()
         }
     }
 
@@ -74,6 +77,6 @@ struct CoffeesList_Previews: PreviewProvider {
 
         let activeCoffeeViewModel = ActiveCoffeeViewModel(getSelectedCoffee: mockUseCase)
         CoffeesList(viewModel: viewModel, activeCoffeeViewModel: activeCoffeeViewModel)
-            .previewDevice("iPhone 12 Pro")
+            .previewDevice("iPhone 13 Pro")
     }
 }

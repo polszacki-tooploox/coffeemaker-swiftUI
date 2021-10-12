@@ -19,14 +19,14 @@ struct ActiveCoffeeView: View {
         VStack {
             HStack(alignment: .bottom) {
                 VStack(alignment: .leading, spacing: 10.0) {
-                    Text(viewModel.name).font(.headline)
+                    Text(viewModel.name)
                         .font(.defaultFont(size: 25.0, weight: .semibold))
                         .foregroundColor(.white)
-                    Text(viewModel.roasteryName).font(.caption)
+                    Text(viewModel.roasteryName)
                         .font(.defaultFont(size: 16.0, weight: .regular))
                         .foregroundColor(.white)
                     Spacer()
-                    Text(viewModel.lastBrewText).font(.caption2)
+                    Text(viewModel.lastBrewText)
                         .font(.defaultFont(size: 14.0, weight: .regular))
                         .foregroundColor(.white.opacity(0.8))
                 }
