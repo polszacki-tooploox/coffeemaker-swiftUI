@@ -18,6 +18,7 @@
 		A29B603A2715B37600C7026B /* CoffeesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29B60392715B37600C7026B /* CoffeesListCell.swift */; };
 		A29B603C2716D0BA00C7026B /* ColorRGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29B603B2716D0BA00C7026B /* ColorRGB.swift */; };
 		A29B603F2716D11400C7026B /* ColorRGB+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29B603E2716D11400C7026B /* ColorRGB+Color.swift */; };
+		A29B6041271707F200C7026B /* CoffeeListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29B6040271707F200C7026B /* CoffeeListItem.swift */; };
 		A2A9DF9F270C5120006B1E60 /* GetSelectedCoffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9DF9E270C5120006B1E60 /* GetSelectedCoffee.swift */; };
 		A2A9DFA1270C512A006B1E60 /* SetSelectedCoffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9DFA0270C512A006B1E60 /* SetSelectedCoffee.swift */; };
 		A2A9DFA3270C532E006B1E60 /* SelectedCoffeeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9DFA2270C532E006B1E60 /* SelectedCoffeeRepository.swift */; };
@@ -150,6 +151,7 @@
 		A29B60392715B37600C7026B /* CoffeesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeesListCell.swift; sourceTree = "<group>"; };
 		A29B603B2716D0BA00C7026B /* ColorRGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRGB.swift; sourceTree = "<group>"; };
 		A29B603E2716D11400C7026B /* ColorRGB+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ColorRGB+Color.swift"; sourceTree = "<group>"; };
+		A29B6040271707F200C7026B /* CoffeeListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeListItem.swift; sourceTree = "<group>"; };
 		A2A9DF9E270C5120006B1E60 /* GetSelectedCoffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSelectedCoffee.swift; sourceTree = "<group>"; };
 		A2A9DFA0270C512A006B1E60 /* SetSelectedCoffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSelectedCoffee.swift; sourceTree = "<group>"; };
 		A2A9DFA2270C532E006B1E60 /* SelectedCoffeeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCoffeeRepository.swift; sourceTree = "<group>"; };
@@ -540,6 +542,7 @@
 				A2EFC6BE255EC4F400D9E93F /* CoffeesListViewModel.swift */,
 				A2D2EF52256696B3004A9E97 /* CoffeeListConnector.swift */,
 				A29B60392715B37600C7026B /* CoffeesListCell.swift */,
+				A29B6040271707F200C7026B /* CoffeeListItem.swift */,
 			);
 			path = CoffeesList;
 			sourceTree = "<group>";
@@ -851,6 +854,7 @@
 			files = (
 				A20B8252257A8DA900FEA9E4 /* AddCoffeeView.swift in Sources */,
 				A29B603A2715B37600C7026B /* CoffeesListCell.swift in Sources */,
+				A29B6041271707F200C7026B /* CoffeeListItem.swift in Sources */,
 				A2A9DFAD270C7D83006B1E60 /* Color+CoffeeMaker.swift in Sources */,
 				A2A9DFAA270C7CC6006B1E60 /* ActiveCoffeeViewModel.swift in Sources */,
 				A2EFC6B5255EC41300D9E93F /* CoffeesList.swift in Sources */,

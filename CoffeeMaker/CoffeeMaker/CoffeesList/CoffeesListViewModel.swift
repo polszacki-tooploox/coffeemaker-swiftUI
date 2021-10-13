@@ -11,7 +11,9 @@ import UIKit
 
 final class CoffeesListViewModel: ObservableObject, Identifiable {
 
-    @Published var coffees: [Coffee] = []
+    @Published var coffees: [CoffeeListItem] = []
+
+    private var selectedIndex: Int?
 
     var addCoffeeView: AddCoffeeView {
         return dependencies.connector.addCoffeeView()
@@ -34,15 +36,22 @@ final class CoffeesListViewModel: ObservableObject, Identifiable {
         setupBinding()
     }
 
-    private func setupBinding() {
-        // TODO: Handle error
-        disposables.insert(dependencies.getAllCofffees.get().assertNoFailure().assign(to: \.coffees, on: self))
+    func selectedCoffee(index: Int) {
+        selectedIndex = index
+        // TOOD: Use a use case to select
+        for i in 0..<coffees.count {
+            coffees[i].isSelected = i == selectedIndex
+        }
     }
 
-    func deleteItems(indices: IndexSet) {
-        indices.forEach {
-            let coffee = coffees[$0]
-            dependencies.deleteCoffee.delete(coffee: coffee)
-        }
+    private func setupBinding() {
+        // TODO: Handle error
+        // TODO: Add getting selected coffee use case
+        disposables.insert(
+            dependencies.getAllCofffees.get()
+                .map { $0.map { CoffeeListItem(coffee: $0) }}
+                .assertNoFailure()
+                .assign(to: \.coffees, on: self)
+        )
     }
 }

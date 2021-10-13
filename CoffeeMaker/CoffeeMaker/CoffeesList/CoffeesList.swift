@@ -43,12 +43,17 @@ struct CoffeesList: View {
 
     private var coffeesList: some View {
         List {
-            ForEach(viewModel.coffees, content: { item in
+            ForEach(0..<viewModel.coffees.count) { index in
+                let item = viewModel.coffees[index]
                 CoffeesListCell(coffee: item)
                     .cornerRadius(14.0)
-            }).onDelete(perform: delete)
-                .listRowBackground(Color.clear)
-                .listRowSeparator(.hidden)
+                    .onTapGesture {
+                        viewModel.selectedCoffee(index: index)
+                    }
+            }
+            .onDelete(perform: delete)
+            .listRowBackground(Color.clear)
+            .listRowSeparator(.hidden)
         }
         .listStyle(PlainListStyle())
     }
@@ -65,7 +70,7 @@ struct CoffeesList: View {
     }
 
     private func delete(offsets: IndexSet) {
-        viewModel.deleteItems(indices: offsets)
+        // TODO
     }
 }
 
