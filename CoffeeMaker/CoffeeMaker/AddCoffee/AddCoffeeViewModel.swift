@@ -30,7 +30,7 @@ final class AddCoffeeViewModel: ObservableObject, Identifiable {
         guard let coffeeName = coffeeName else {
             return
         }
-        let coffee = Coffee(id: UUID().uuidString, name: coffeeName, roasteryName: "", imagePath: nil, brewings: [])
+        let coffee = Coffee(id: UUID().uuidString, name: coffeeName, roasteryName: "", color: ColorRGB(red: 30, green: 100, blue: 60), imagePath: nil, brewings: [])
         disposables.insert(dependencies.addCoffee.add(coffee: coffee)
                             .sink(receiveCompletion: { [weak self] completion in
                                 switch completion {

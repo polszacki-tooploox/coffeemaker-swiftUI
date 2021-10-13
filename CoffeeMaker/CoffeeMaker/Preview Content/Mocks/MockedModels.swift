@@ -14,6 +14,7 @@ extension Coffee {
             id: UUID().uuidString,
             name: "Brazil test coffee",
             roasteryName: "Mock Roast",
+            color: ColorRGB(red: 20, green: 100, blue: 40),
             imagePath: nil,
             brewings: [CoffeeBrewing.mocked]
         )

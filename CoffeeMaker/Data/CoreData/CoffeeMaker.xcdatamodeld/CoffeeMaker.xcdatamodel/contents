@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Coffee" representedClassName="Coffee" syncable="YES" codeGenerationType="class">
+        <attribute name="color" optional="YES" attributeType="Binary"/>
         <attribute name="id" attributeType="String"/>
         <attribute name="imageURL" optional="YES" attributeType="URI"/>
         <attribute name="name" attributeType="String"/>
@@ -17,7 +18,7 @@
         <relationship name="coffee" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Coffee" inverseName="brewings" inverseEntity="Coffee"/>
     </entity>
     <elements>
-        <element name="Coffee" positionX="-407.4600219726562" positionY="-50.489990234375" width="128" height="118"/>
+        <element name="Coffee" positionX="-407.4600219726562" positionY="-50.489990234375" width="128" height="133"/>
         <element name="CoffeeBrewing" positionX="-151.3047485351562" positionY="2.721588134765625" width="128" height="148"/>
     </elements>
 </model>

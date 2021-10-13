@@ -20,32 +20,6 @@ struct CoffeesList: View {
         self.activeCoffeeViewModel = activeCoffeeViewModel
     }
 
-    private var contentView: some View {
-        VStack {
-            ActiveCoffeeView(viewModel: activeCoffeeViewModel)
-                .padding()
-                .frame(height: 150.0, alignment: .center)
-            List {
-                ForEach(viewModel.coffees, content: { item in
-                    CoffeesListCell(coffee: item)
-                        .cornerRadius(14.0)
-                }).onDelete(perform: delete)
-                    .listRowBackground(Color.clear)
-                    .listRowInsets(EdgeInsets())
-            }
-            .listRowSeparator(.hidden)
-            .padding()
-            Button(action: {}) {
-                Text("Add coffee")
-                    .font(Font.defaultFont(size: 20.0, weight: .semibold))
-                    .frame(maxWidth: 200)
-            }
-            .buttonStyle(.borderedProminent)
-            .controlSize(.large)
-            .tint(Color.darkAccent)
-        }
-    }
-
     var body: some View {
         NavigationView {
             ZStack {
@@ -57,6 +31,39 @@ struct CoffeesList: View {
         }
     }
 
+    private var contentView: some View {
+        VStack {
+            ActiveCoffeeView(viewModel: activeCoffeeViewModel)
+                .padding(.horizontal)
+                .frame(height: 150.0, alignment: .center)
+            coffeesList
+            addCoffeeButton
+        }
+    }
+
+    private var coffeesList: some View {
+        List {
+            ForEach(viewModel.coffees, content: { item in
+                CoffeesListCell(coffee: item)
+                    .cornerRadius(14.0)
+            }).onDelete(perform: delete)
+                .listRowBackground(Color.clear)
+                .listRowSeparator(.hidden)
+        }
+        .listStyle(PlainListStyle())
+    }
+
+    private var addCoffeeButton: some View {
+        Button(action: {}) {
+            Text("Add coffee")
+                .font(Font.defaultFont(size: 20.0, weight: .semibold))
+                .frame(maxWidth: 200)
+        }
+        .buttonStyle(.borderedProminent)
+        .controlSize(.large)
+        .tint(Color.darkAccent)
+    }
+
     private func delete(offsets: IndexSet) {
         viewModel.deleteItems(indices: offsets)
     }
@@ -64,7 +71,7 @@ struct CoffeesList: View {
 
 struct CoffeesList_Previews: PreviewProvider {
     static var previews: some View {
-        let mockUseCase = MockedCoffeeUseCase()
+        let mockUseCase = MockedCoffeeUseCase(mockSelectedCoffee: Coffee.mocked, mockCoffees: [Coffee.mocked, Coffee.mocked, Coffee.mocked])
         let viewModel = CoffeesListViewModel(dependencies:
                                                 .init(
                                                     getAllCofffees: mockUseCase,

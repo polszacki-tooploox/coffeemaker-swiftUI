@@ -11,6 +11,7 @@ public struct Coffee {
     public let id: String
     public let name: String
     public let roasteryName: String
+    public let color: ColorRGB
     public let imagePath: String?
     public let brewings: [CoffeeBrewing]
 
@@ -18,12 +19,14 @@ public struct Coffee {
         id: String,
         name: String,
         roasteryName: String,
+        color: ColorRGB,
         imagePath: String?,
         brewings: [CoffeeBrewing]
     ) {
         self.id = id
         self.name = name
         self.roasteryName = roasteryName
+        self.color = color
         self.imagePath = imagePath
         self.brewings = brewings
     }

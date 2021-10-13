@@ -12,11 +12,12 @@ import CoreData
 extension Coffee {
     var domainCoffee: Domain.Coffee {
         Domain.Coffee(
-            id: id ?? UUID().uuidString,
-            name: name ?? "",
-            roasteryName: roasteryName ?? "",
+            id: id!,
+            name: name!,
+            roasteryName: roasteryName!,
+            color: try! JSONDecoder().decode(ColorRGB.self, from: color!),
             imagePath: imageURL?.absoluteString,
-            brewings: brewings?.allObjects.map { ($0 as! CoffeeBrewing).domainCoffeeBrewing } ?? []
+            brewings: brewings!.allObjects.map { ($0 as! CoffeeBrewing).domainCoffeeBrewing }
         )
     }
 }
@@ -28,6 +29,7 @@ extension Domain.Coffee {
         let coffee = NSManagedObject(entity: coffeeEntity, insertInto: context) as! Coffee
         coffee.name = name
         coffee.roasteryName = roasteryName
+        coffee.color = try JSONEncoder().encode(color)
         if let imagePath = imagePath {
             coffee.imageURL = URL(string: imagePath)
         }
