@@ -9,5 +9,5 @@ import Foundation
 import Combine
 
 public protocol SetSelectedCoffee {
-    func select(coffee: Coffee?)
+    func select(coffeeId: String?)
 }

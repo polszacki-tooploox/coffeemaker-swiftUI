@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Coffee {
+public struct Coffee: Equatable {
     public let id: String
     public let name: String
     public let roasteryName: String
@@ -29,5 +29,9 @@ public struct Coffee {
         self.color = color
         self.imagePath = imagePath
         self.brewings = brewings
+    }
+
+    public static func == (lhs: Coffee, rhs: Coffee) -> Bool {
+        lhs.id == rhs.id
     }
 }

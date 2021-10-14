@@ -15,13 +15,13 @@ struct CoffeeListItem: Identifiable {
     let mainText: String
     let detailText: String
     let color: Color
-    var isSelected: Bool
+    let isSelected: Bool
 
-    init(coffee: Coffee) {
+    init(coffee: Coffee, isSelected: Bool) {
         id = coffee.id
         mainText = coffee.name
         detailText = coffee.roasteryName
         color = coffee.color.toColor()
-        isSelected = false
+        self.isSelected = isSelected
     }
 }

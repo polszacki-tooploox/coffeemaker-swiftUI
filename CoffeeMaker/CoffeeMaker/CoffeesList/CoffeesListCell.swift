@@ -35,7 +35,7 @@ struct CoffeesListCell: View {
 
 struct CoffeesListCell_Previews: PreviewProvider {
     static var previews: some View {
-            CoffeesListCell(coffee: CoffeeListItem(coffee: Coffee.mocked))
+            CoffeesListCell(coffee: CoffeeListItem(coffee: Coffee.mocked, isSelected: false))
                 .frame(maxWidth: 300.0, maxHeight: 65.0, alignment: .leading)
                 .background(Color.neutral)
     }

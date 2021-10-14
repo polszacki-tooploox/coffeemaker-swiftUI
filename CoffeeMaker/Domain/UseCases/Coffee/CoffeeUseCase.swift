@@ -40,7 +40,7 @@ public final class CoffeeUseCase: AddCoffee, DeleteCoffee, GetAllCoffees, GetSel
             .eraseToAnyPublisher()
     }
 
-    public func select(coffee: Coffee?) {
-        selectedCoffeeRepository.selectCoffee(coffeeId: coffee?.id)
+    public func select(coffeeId: String?) {
+        selectedCoffeeRepository.selectCoffee(coffeeId: coffeeId)
     }
 }

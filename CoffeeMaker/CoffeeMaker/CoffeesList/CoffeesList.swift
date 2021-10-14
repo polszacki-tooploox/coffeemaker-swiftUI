@@ -43,12 +43,11 @@ struct CoffeesList: View {
 
     private var coffeesList: some View {
         List {
-            ForEach(0..<viewModel.coffees.count) { index in
-                let item = viewModel.coffees[index]
-                CoffeesListCell(coffee: item)
+            ForEach(viewModel.coffees) { coffee in
+                CoffeesListCell(coffee: coffee)
                     .cornerRadius(14.0)
                     .onTapGesture {
-                        viewModel.selectedCoffee(index: index)
+                        viewModel.selectedCoffee(coffee: coffee)
                     }
             }
             .onDelete(perform: delete)
@@ -76,7 +75,7 @@ struct CoffeesList: View {
 
 struct CoffeesList_Previews: PreviewProvider {
     static var previews: some View {
-        let mockUseCase = MockedCoffeeUseCase(mockSelectedCoffee: Coffee.mocked, mockCoffees: [Coffee.mocked, Coffee.mocked, Coffee.mocked])
+        let mockUseCase = MockedCoffeeUseCase(mockSelectedCoffeeId: Coffee.mocked.id, mockCoffees: [Coffee.mocked, Coffee.mocked, Coffee.mocked])
         let viewModel = CoffeesListViewModel(dependencies:
                                                 .init(
                                                     getAllCofffees: mockUseCase,
