@@ -7,16 +7,25 @@
 
 import Combine
 import Domain
+import SwiftUI
 
 final class AddCoffeeViewModel: ObservableObject, Identifiable {
 
-    @Published var title: String = "Add coffee"
-    @Published var labelText: String = "Coffee name:"
-    @Published var coffeeName: String?
-    @Published var shouldDimiss: Bool = false
+    @State var coffeeColor = Color.red
+    @Published var coffeeName: String = ""
+    @Published var roasteryName: String = ""
+
+    private(set) lazy var isSubmittable: AnyPublisher<Bool, Never> = {
+        $coffeeName.combineLatest($roasteryName)
+            .map {
+                !$0.0.isEmpty && !$0.1.isEmpty
+            }
+            .eraseToAnyPublisher()
+    }()
 
     struct Dependencies {
         let addCoffee: AddCoffee
+        let connector: RootConnector
     }
 
     private var disposables = Set<AnyCancellable>()
@@ -27,25 +36,27 @@ final class AddCoffeeViewModel: ObservableObject, Identifiable {
     }
 
     func addTapped() {
-        guard let coffeeName = coffeeName else {
-            return
-        }
-        let coffee = Coffee(id: UUID().uuidString, name: coffeeName, roasteryName: "", color: ColorRGB(red: 30, green: 100, blue: 60), imagePath: nil, brewings: [])
+        let coffee = Coffee(
+            id: UUID().uuidString,
+            name: coffeeName,
+            roasteryName: roasteryName,
+            color: coffeeColor.toColorRGB(),
+            imagePath: nil,
+            brewings: []
+        )
         disposables.insert(dependencies.addCoffee.add(coffee: coffee)
                             .sink(receiveCompletion: { [weak self] completion in
                                 switch completion {
                                 case .finished:
-                                    self?.coffeeName = nil
-                                    self?.shouldDimiss = true
+                                    self?.backSelected()
                                     print("Coffee added")
-                                    break
                                 case .failure(let error):
                                     print(error.localizedDescription)
                                 }
                             }, receiveValue: { _ in }))
     }
 
-    deinit {
-        print("Blah")
+    func backSelected() {
+        dependencies.connector.updateState(.coffeesList)
     }
 }

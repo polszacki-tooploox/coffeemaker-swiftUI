@@ -1,18 +1,17 @@
 //
-//  CoffeeListConnector.swift
+//  ViewsConstructor.swift
 //  CoffeeMaker
 //
-//  Created by Przemysław Olszacki on 19/11/2020.
+//  Created by Przemysław Olszacki on 18/10/2021.
 //
 
 import Foundation
-import SwiftUI
 import Domain
 import Data
 
-final class CoffeeListConnector {
+final class ViewsConstructor {
 
-    func coffeeListView() -> CoffeesList {
+    static func coffeeListView(rootConnector: RootConnector) -> CoffeesList {
         let coffeeRepository = CoreDataCoffeeRepository()
         let selectedCoffeeRepository = UserDefaultsSelectedCoffeeRepository()
         let coffeeUseCase = CoffeeUseCase(
@@ -26,7 +25,7 @@ final class CoffeeListConnector {
                                                     getSelectedCoffee: coffeeUseCase,
                                                     setSelectedCoffee: coffeeUseCase,
                                                     deleteCoffee: coffeeUseCase,
-                                                    connector: self
+                                                    connector: rootConnector
                                                 )
         )
 
@@ -34,7 +33,7 @@ final class CoffeeListConnector {
         return CoffeesList(viewModel: viewModel, activeCoffeeViewModel: activeCoffeeViewModel)
     }
 
-    func addCoffeeView() -> AddCoffeeView {
+    static func addCoffeeView(rootConnector: RootConnector) -> AddCoffeeView {
         let coffeeRepository = CoreDataCoffeeRepository()
         let selectedCoffeeRepository = UserDefaultsSelectedCoffeeRepository()
         let coffeeUseCase = CoffeeUseCase(
@@ -44,13 +43,10 @@ final class CoffeeListConnector {
 
         let viewModel = AddCoffeeViewModel(dependencies:
                                             .init(
-                                                addCoffee: coffeeUseCase
+                                                addCoffee: coffeeUseCase,
+                                                connector: rootConnector
                                             )
         )
         return AddCoffeeView(viewModel: viewModel)
-    }
-
-    func dismiss() {
-        
     }
 }

@@ -10,15 +10,18 @@
 		A20B8222257A76C800FEA9E4 /* Coffee+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20B8221257A76C800FEA9E4 /* Coffee+Mapping.swift */; };
 		A20B8237257A862E00FEA9E4 /* CoffeeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20B8236257A862E00FEA9E4 /* CoffeeUseCase.swift */; };
 		A20B8252257A8DA900FEA9E4 /* AddCoffeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20B8251257A8DA900FEA9E4 /* AddCoffeeView.swift */; };
+		A220C304271D8DBA00D87AD0 /* ViewsConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A220C303271D8DBA00D87AD0 /* ViewsConstructor.swift */; };
 		A24321D225821E9900863C71 /* AddCoffeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24321D125821E9900863C71 /* AddCoffeeViewModel.swift */; };
 		A2576DA6256B9B4A00B1EF86 /* CoffeeMaker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2EFC601255EB19700D9E93F /* CoffeeMaker.xcdatamodeld */; };
 		A2576DAD256B9B6300B1EF86 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EFC5FF255EB19700D9E93F /* CoreDataStack.swift */; };
 		A2576DBC256BA1B100B1EF86 /* CoffeeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2576DBB256BA1B100B1EF86 /* CoffeeRepository.swift */; };
 		A2576DC5256BC2D800B1EF86 /* CoreDataCoffeeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2576DC4256BC2D800B1EF86 /* CoreDataCoffeeRepository.swift */; };
+		A298C15F27215D8D007E3863 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A298C15E27215D8D007E3863 /* TestView.swift */; };
 		A29B603A2715B37600C7026B /* CoffeesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29B60392715B37600C7026B /* CoffeesListCell.swift */; };
 		A29B603C2716D0BA00C7026B /* ColorRGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29B603B2716D0BA00C7026B /* ColorRGB.swift */; };
 		A29B603F2716D11400C7026B /* ColorRGB+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29B603E2716D11400C7026B /* ColorRGB+Color.swift */; };
 		A29B6041271707F200C7026B /* CoffeeListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29B6040271707F200C7026B /* CoffeeListItem.swift */; };
+		A29B60452719969200C7026B /* RootConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29B60442719969200C7026B /* RootConnector.swift */; };
 		A2A9DF9F270C5120006B1E60 /* GetSelectedCoffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9DF9E270C5120006B1E60 /* GetSelectedCoffee.swift */; };
 		A2A9DFA1270C512A006B1E60 /* SetSelectedCoffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9DFA0270C512A006B1E60 /* SetSelectedCoffee.swift */; };
 		A2A9DFA3270C532E006B1E60 /* SelectedCoffeeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9DFA2270C532E006B1E60 /* SelectedCoffeeRepository.swift */; };
@@ -39,7 +42,6 @@
 		A2B17A922570E182003B346F /* CoreDataEntitiesPublisherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B17A912570E182003B346F /* CoreDataEntitiesPublisherProvider.swift */; };
 		A2B17A9A2570F3B4003B346F /* CoreDataEntitiesPublisherProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B17A992570F3B4003B346F /* CoreDataEntitiesPublisherProviderTests.swift */; };
 		A2B17AA2257121D4003B346F /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B17AA1257121D4003B346F /* TestCoreDataStack.swift */; };
-		A2D2EF53256696B3004A9E97 /* CoffeeListConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D2EF52256696B3004A9E97 /* CoffeeListConnector.swift */; };
 		A2D2EF6A25669845004A9E97 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2D2EF6125669844004A9E97 /* Data.framework */; };
 		A2D2EF7125669845004A9E97 /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D2EF7025669845004A9E97 /* DataTests.swift */; };
 		A2D2EF7325669845004A9E97 /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = A2D2EF6325669844004A9E97 /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -145,13 +147,16 @@
 		A20B8221257A76C800FEA9E4 /* Coffee+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coffee+Mapping.swift"; sourceTree = "<group>"; };
 		A20B8236257A862E00FEA9E4 /* CoffeeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeUseCase.swift; sourceTree = "<group>"; };
 		A20B8251257A8DA900FEA9E4 /* AddCoffeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoffeeView.swift; sourceTree = "<group>"; };
+		A220C303271D8DBA00D87AD0 /* ViewsConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsConstructor.swift; sourceTree = "<group>"; };
 		A24321D125821E9900863C71 /* AddCoffeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoffeeViewModel.swift; sourceTree = "<group>"; };
 		A2576DBB256BA1B100B1EF86 /* CoffeeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeRepository.swift; sourceTree = "<group>"; };
 		A2576DC4256BC2D800B1EF86 /* CoreDataCoffeeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataCoffeeRepository.swift; sourceTree = "<group>"; };
+		A298C15E27215D8D007E3863 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		A29B60392715B37600C7026B /* CoffeesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeesListCell.swift; sourceTree = "<group>"; };
 		A29B603B2716D0BA00C7026B /* ColorRGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRGB.swift; sourceTree = "<group>"; };
 		A29B603E2716D11400C7026B /* ColorRGB+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ColorRGB+Color.swift"; sourceTree = "<group>"; };
 		A29B6040271707F200C7026B /* CoffeeListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeListItem.swift; sourceTree = "<group>"; };
+		A29B60442719969200C7026B /* RootConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootConnector.swift; sourceTree = "<group>"; };
 		A2A9DF9E270C5120006B1E60 /* GetSelectedCoffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSelectedCoffee.swift; sourceTree = "<group>"; };
 		A2A9DFA0270C512A006B1E60 /* SetSelectedCoffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSelectedCoffee.swift; sourceTree = "<group>"; };
 		A2A9DFA2270C532E006B1E60 /* SelectedCoffeeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCoffeeRepository.swift; sourceTree = "<group>"; };
@@ -172,7 +177,6 @@
 		A2B17A912570E182003B346F /* CoreDataEntitiesPublisherProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEntitiesPublisherProvider.swift; sourceTree = "<group>"; };
 		A2B17A992570F3B4003B346F /* CoreDataEntitiesPublisherProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEntitiesPublisherProviderTests.swift; sourceTree = "<group>"; };
 		A2B17AA1257121D4003B346F /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
-		A2D2EF52256696B3004A9E97 /* CoffeeListConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeListConnector.swift; sourceTree = "<group>"; };
 		A2D2EF6125669844004A9E97 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D2EF6325669844004A9E97 /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		A2D2EF6425669844004A9E97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -336,6 +340,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		A29B60422719968200C7026B /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				A29B60442719969200C7026B /* RootConnector.swift */,
+				A220C303271D8DBA00D87AD0 /* ViewsConstructor.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		A2A9DFA8270C7CB9006B1E60 /* ActiveCoffee */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,6 +469,7 @@
 		A2EFC5F5255EB19500D9E93F /* CoffeeMaker */ = {
 			isa = PBXGroup;
 			children = (
+				A29B60422719968200C7026B /* Navigation */,
 				A29B603D2716D10B00C7026B /* Models */,
 				A2A9DFBC270F0DC9006B1E60 /* Resources */,
 				A2A9DFAB270C7D72006B1E60 /* Style */,
@@ -465,6 +479,7 @@
 				A2EFC5F6255EB19500D9E93F /* CoffeeMakerApp.swift */,
 				A2EFC604255EB19700D9E93F /* Info.plist */,
 				A2EFC5FC255EB19700D9E93F /* Preview Content */,
+				A298C15E27215D8D007E3863 /* TestView.swift */,
 			);
 			path = CoffeeMaker;
 			sourceTree = "<group>";
@@ -540,7 +555,6 @@
 			children = (
 				A2EFC6B4255EC41300D9E93F /* CoffeesList.swift */,
 				A2EFC6BE255EC4F400D9E93F /* CoffeesListViewModel.swift */,
-				A2D2EF52256696B3004A9E97 /* CoffeeListConnector.swift */,
 				A29B60392715B37600C7026B /* CoffeesListCell.swift */,
 				A29B6040271707F200C7026B /* CoffeeListItem.swift */,
 			);
@@ -858,15 +872,17 @@
 				A2A9DFAD270C7D83006B1E60 /* Color+CoffeeMaker.swift in Sources */,
 				A2A9DFAA270C7CC6006B1E60 /* ActiveCoffeeViewModel.swift in Sources */,
 				A2EFC6B5255EC41300D9E93F /* CoffeesList.swift in Sources */,
+				A298C15F27215D8D007E3863 /* TestView.swift in Sources */,
 				A24321D225821E9900863C71 /* AddCoffeeViewModel.swift in Sources */,
 				A2EFC6BF255EC4F400D9E93F /* CoffeesListViewModel.swift in Sources */,
 				A2A9DFB8270EFC2A006B1E60 /* MockedModels.swift in Sources */,
+				A29B60452719969200C7026B /* RootConnector.swift in Sources */,
 				A2A9DFBB270F0CF1006B1E60 /* Font+CoffeeMaker.swift in Sources */,
 				A29B603F2716D11400C7026B /* ColorRGB+Color.swift in Sources */,
 				A2A9DFC7270F26FA006B1E60 /* NavigationBarStyling.swift in Sources */,
+				A220C304271D8DBA00D87AD0 /* ViewsConstructor.swift in Sources */,
 				A2A9DFA7270C7C7D006B1E60 /* ActiveCoffeeView.swift in Sources */,
 				A2EFC5F7255EB19500D9E93F /* CoffeeMakerApp.swift in Sources */,
-				A2D2EF53256696B3004A9E97 /* CoffeeListConnector.swift in Sources */,
 				A2A9DFB9270EFC35006B1E60 /* MockedUseCases.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -58,7 +58,11 @@ struct CoffeesList: View {
     }
 
     private var addCoffeeButton: some View {
-        Button(action: {}) {
+        Button(action: {
+            withAnimation {
+                viewModel.addCoffeeSelected()
+            }
+        }) {
             Text("Add coffee")
                 .font(Font.defaultFont(size: 20.0, weight: .semibold))
                 .frame(maxWidth: 200)
@@ -82,7 +86,7 @@ struct CoffeesList_Previews: PreviewProvider {
                                                     getSelectedCoffee: mockUseCase,
                                                     setSelectedCoffee: mockUseCase,
                                                     deleteCoffee: mockUseCase,
-                                                    connector: CoffeeListConnector()
+                                                    connector: RootConnector()
                                                 )
         )
 

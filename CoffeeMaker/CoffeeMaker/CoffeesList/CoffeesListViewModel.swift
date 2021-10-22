@@ -8,21 +8,18 @@
 import Combine
 import Domain
 import UIKit
+import SwiftUI
 
 final class CoffeesListViewModel: ObservableObject, Identifiable {
 
     @Published var coffees: [CoffeeListItem] = []
-
-    var addCoffeeView: AddCoffeeView {
-        return dependencies.connector.addCoffeeView()
-    }
 
     struct Dependencies {
         let getAllCofffees: GetAllCoffees
         let getSelectedCoffee: GetSelectedCoffee
         let setSelectedCoffee: SetSelectedCoffee
         let deleteCoffee: DeleteCoffee
-        let connector: CoffeeListConnector
+        let connector: RootConnector
     }
 
     private var disposables = Set<AnyCancellable>()
@@ -35,6 +32,10 @@ final class CoffeesListViewModel: ObservableObject, Identifiable {
 
     func selectedCoffee(coffee: CoffeeListItem) {
         dependencies.setSelectedCoffee.select(coffeeId: coffee.id)
+    }
+
+    func addCoffeeSelected() {
+        dependencies.connector.updateState(.addCoffee)
     }
 
     private func setupBinding() {
