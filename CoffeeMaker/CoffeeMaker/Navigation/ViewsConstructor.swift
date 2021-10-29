@@ -11,42 +11,14 @@ import Data
 
 final class ViewsConstructor {
 
-    static func coffeeListView(rootConnector: RootConnector) -> CoffeesList {
-        let coffeeRepository = CoreDataCoffeeRepository()
-        let selectedCoffeeRepository = UserDefaultsSelectedCoffeeRepository()
-        let coffeeUseCase = CoffeeUseCase(
-            coffeeRepository: coffeeRepository,
-            selectedCoffeeRepository: selectedCoffeeRepository
-        )
-
-        let viewModel = CoffeesListViewModel(dependencies:
-                                                .init(
-                                                    getAllCofffees: coffeeUseCase,
-                                                    getSelectedCoffee: coffeeUseCase,
-                                                    setSelectedCoffee: coffeeUseCase,
-                                                    deleteCoffee: coffeeUseCase,
-                                                    connector: rootConnector
-                                                )
-        )
-
-        let activeCoffeeViewModel = ActiveCoffeeViewModel(getSelectedCoffee: coffeeUseCase)
+    static func coffeeListView(store: AppStore) -> CoffeesList {
+        let activeCoffeeViewModel = ActiveCoffeeViewModel()
+        let viewModel = CoffeesListViewModel(store: store)
         return CoffeesList(viewModel: viewModel, activeCoffeeViewModel: activeCoffeeViewModel)
     }
 
-    static func addCoffeeView(rootConnector: RootConnector) -> AddCoffeeView {
-        let coffeeRepository = CoreDataCoffeeRepository()
-        let selectedCoffeeRepository = UserDefaultsSelectedCoffeeRepository()
-        let coffeeUseCase = CoffeeUseCase(
-            coffeeRepository: coffeeRepository,
-            selectedCoffeeRepository: selectedCoffeeRepository
-        )
-
-        let viewModel = AddCoffeeViewModel(dependencies:
-                                            .init(
-                                                addCoffee: coffeeUseCase,
-                                                connector: rootConnector
-                                            )
-        )
+    static func addCoffeeView(store: AppStore) -> AddCoffeeView {
+        let viewModel = AddCoffeeViewModel()
         return AddCoffeeView(viewModel: viewModel)
     }
 }

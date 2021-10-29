@@ -5,51 +5,29 @@
 //  Created by Przemysław Olszacki on 13/11/2020.
 //
 
-import Combine
 import Domain
-import UIKit
 import SwiftUI
 
 final class CoffeesListViewModel: ObservableObject, Identifiable {
 
-    @Published var coffees: [CoffeeListItem] = []
+    private let store: AppStore
 
-    struct Dependencies {
-        let getAllCofffees: GetAllCoffees
-        let getSelectedCoffee: GetSelectedCoffee
-        let setSelectedCoffee: SetSelectedCoffee
-        let deleteCoffee: DeleteCoffee
-        let connector: RootConnector
+    @Published var coffees = [CoffeeListItem]()
+
+    init(store: AppStore) {
+        self.store = store
+        setupBindings()
     }
 
-    private var disposables = Set<AnyCancellable>()
-    private let dependencies: Dependencies
-
-    init(dependencies: Dependencies) {
-        self.dependencies = dependencies
-        setupBinding()
+    private func setupBindings() {
+        coffees = store.state.coffeeList.coffees.map { CoffeeListItem(coffee: $0, isSelected: false) }
     }
 
     func selectedCoffee(coffee: CoffeeListItem) {
-        dependencies.setSelectedCoffee.select(coffeeId: coffee.id)
+        store.dispatch(.coffeeListAction(.selectCoffee(coffeeId: coffee.id)))
     }
 
     func addCoffeeSelected() {
-        dependencies.connector.updateState(.addCoffee)
-    }
-
-    private func setupBinding() {
-        // TODO: Handle error
-        disposables.insert(
-            dependencies.getAllCofffees.get()
-                .combineLatest(dependencies.getSelectedCoffee.get())
-                .map { (allCoffees, selectedCoffee) in
-                    allCoffees.map {
-                        CoffeeListItem(coffee: $0, isSelected: selectedCoffee == $0)
-                    }
-                }
-                .assertNoFailure()
-                .assign(to: \.coffees, on: self)
-        )
+        store.dispatch(.coffeeListAction(.selectAddCoffee))
     }
 }

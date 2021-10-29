@@ -6,11 +6,10 @@
 //
 
 import SwiftUI
+import Domain
 
 @main
 struct CoffeeMakerApp: App {
-
-    @ObservedObject var rootConnector = RootConnector()
 
     init() {
         setupGlobalUIAppearance()
@@ -19,14 +18,7 @@ struct CoffeeMakerApp: App {
     @ViewBuilder
     var body: some Scene {
         WindowGroup {
-            TestView()
-
-//            switch rootConnector.appState {
-//            case .coffeesList:
-//                ViewsConstructor.coffeeListView(rootConnector: rootConnector)
-//            case .addCoffee:
-//                ViewsConstructor.addCoffeeView(rootConnector: rootConnector)
-//            }
+            BaseView()
         }
     }
 

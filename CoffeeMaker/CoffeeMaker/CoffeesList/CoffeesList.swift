@@ -79,19 +79,7 @@ struct CoffeesList: View {
 
 struct CoffeesList_Previews: PreviewProvider {
     static var previews: some View {
-        let mockUseCase = MockedCoffeeUseCase(mockSelectedCoffeeId: Coffee.mocked.id, mockCoffees: [Coffee.mocked, Coffee.mocked, Coffee.mocked])
-        let viewModel = CoffeesListViewModel(dependencies:
-                                                .init(
-                                                    getAllCofffees: mockUseCase,
-                                                    getSelectedCoffee: mockUseCase,
-                                                    setSelectedCoffee: mockUseCase,
-                                                    deleteCoffee: mockUseCase,
-                                                    connector: RootConnector()
-                                                )
-        )
+        Text("Test")
 
-        let activeCoffeeViewModel = ActiveCoffeeViewModel(getSelectedCoffee: mockUseCase)
-        CoffeesList(viewModel: viewModel, activeCoffeeViewModel: activeCoffeeViewModel)
-            .previewDevice("iPhone 13 Pro")
     }
 }

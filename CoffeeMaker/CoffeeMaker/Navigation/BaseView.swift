@@ -1,0 +1,42 @@
+//
+//  BaseView.swift
+//  CoffeeMaker
+//
+//  Created by Przemysław Olszacki on 26/10/2021.
+//
+
+import SwiftUI
+import Domain
+
+struct BaseView: View {
+
+    @ObservedObject var appStore = AppStore(
+        initial: AppState(
+            coffeeList: .init(coffees: [
+                Coffee.mocked, Coffee.mocked], selecetedCoffeeId: nil),
+            addCoffee: .init(),
+            navigationState: .coffeeList
+        ),
+        reducer: appReducer,
+        middlewares: [])
+
+
+    @ViewBuilder
+    var body: some View {
+        switch appStore.state.navigationState {
+        case .coffeeList:
+            ViewsConstructor.coffeeListView(store: appStore)
+        case .addCoffee:
+            ViewsConstructor.addCoffeeView(store: appStore)
+        default:
+            Text("Test")
+        }
+    }
+}
+
+
+struct BaseView_Previews: PreviewProvider {
+    static var previews: some View {
+        BaseView()
+    }
+}

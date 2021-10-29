@@ -11,6 +11,7 @@ import SwiftUI
 
 final class AddCoffeeViewModel: ObservableObject, Identifiable {
 
+    @EnvironmentObject var store: AppStore
     @State var coffeeColor = Color.red
     @Published var coffeeName: String = ""
     @Published var roasteryName: String = ""
@@ -23,40 +24,31 @@ final class AddCoffeeViewModel: ObservableObject, Identifiable {
             .eraseToAnyPublisher()
     }()
 
-    struct Dependencies {
-        let addCoffee: AddCoffee
-        let connector: RootConnector
-    }
 
     private var disposables = Set<AnyCancellable>()
-    private let dependencies: Dependencies
-
-    init(dependencies: Dependencies) {
-        self.dependencies = dependencies
-    }
 
     func addTapped() {
-        let coffee = Coffee(
-            id: UUID().uuidString,
-            name: coffeeName,
-            roasteryName: roasteryName,
-            color: coffeeColor.toColorRGB(),
-            imagePath: nil,
-            brewings: []
-        )
-        disposables.insert(dependencies.addCoffee.add(coffee: coffee)
-                            .sink(receiveCompletion: { [weak self] completion in
-                                switch completion {
-                                case .finished:
-                                    self?.backSelected()
-                                    print("Coffee added")
-                                case .failure(let error):
-                                    print(error.localizedDescription)
-                                }
-                            }, receiveValue: { _ in }))
+//        let coffee = Coffee(
+//            id: UUID().uuidString,
+//            name: coffeeName,
+//            roasteryName: roasteryName,
+//            color: coffeeColor.toColorRGB(),
+//            imagePath: nil,
+//            brewings: []
+//        )
+//        disposables.insert(dependencies.addCoffee.add(coffee: coffee)
+//                            .sink(receiveCompletion: { [weak self] completion in
+//                                switch completion {
+//                                case .finished:
+//                                    self?.backSelected()
+//                                    print("Coffee added")
+//                                case .failure(let error):
+//                                    print(error.localizedDescription)
+//                                }
+//                            }, receiveValue: { _ in }))
     }
 
     func backSelected() {
-        dependencies.connector.updateState(.coffeesList)
+//        dependencies.connector.updateState(.coffeesList)
     }
 }

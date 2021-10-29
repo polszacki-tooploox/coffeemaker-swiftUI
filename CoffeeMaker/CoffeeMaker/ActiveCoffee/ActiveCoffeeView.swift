@@ -54,11 +54,6 @@ struct ActiveCoffeeView: View {
 
 struct ActiveCoffeeView_Previews: PreviewProvider {
     static var previews: some View {
-        let getSelectedCoffee = MockedCoffeeUseCase()
-        let viewModel = ActiveCoffeeViewModel(
-            getSelectedCoffee: getSelectedCoffee
-        )
-        return ActiveCoffeeView(viewModel: viewModel)
-            .previewLayout(.fixed(width: /*@START_MENU_TOKEN@*/350.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/150.0/*@END_MENU_TOKEN@*/))
+        Text("Test")
     }
 }

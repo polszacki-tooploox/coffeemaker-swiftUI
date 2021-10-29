@@ -68,6 +68,6 @@ struct AddCoffeeView: View {
 
 struct AddCoffeeView_Previews: PreviewProvider {
     static var previews: some View {
-        ViewsConstructor.addCoffeeView(rootConnector: RootConnector())
+        Text("Test")
     }
 }
