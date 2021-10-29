@@ -20,6 +20,8 @@
 		A29B603C2716D0BA00C7026B /* ColorRGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29B603B2716D0BA00C7026B /* ColorRGB.swift */; };
 		A29B603F2716D11400C7026B /* ColorRGB+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29B603E2716D11400C7026B /* ColorRGB+Color.swift */; };
 		A29B6041271707F200C7026B /* CoffeeListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29B6040271707F200C7026B /* CoffeeListItem.swift */; };
+		A2A8714F272BDDCF00AF9814 /* AddCoffeeReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A8714E272BDDCF00AF9814 /* AddCoffeeReducer.swift */; };
+		A2A87151272BEBD800AF9814 /* NavigationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A87150272BEBD800AF9814 /* NavigationReducer.swift */; };
 		A2A9DFA3270C532E006B1E60 /* SelectedCoffeeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9DFA2270C532E006B1E60 /* SelectedCoffeeRepository.swift */; };
 		A2A9DFA5270C5DE3006B1E60 /* UserDefaultsSelectedCoffeeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9DFA4270C5DE3006B1E60 /* UserDefaultsSelectedCoffeeRepository.swift */; };
 		A2A9DFA7270C7C7D006B1E60 /* ActiveCoffeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A9DFA6270C7C7D006B1E60 /* ActiveCoffeeView.swift */; };
@@ -159,6 +161,8 @@
 		A29B603B2716D0BA00C7026B /* ColorRGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRGB.swift; sourceTree = "<group>"; };
 		A29B603E2716D11400C7026B /* ColorRGB+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ColorRGB+Color.swift"; sourceTree = "<group>"; };
 		A29B6040271707F200C7026B /* CoffeeListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeListItem.swift; sourceTree = "<group>"; };
+		A2A8714E272BDDCF00AF9814 /* AddCoffeeReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoffeeReducer.swift; sourceTree = "<group>"; };
+		A2A87150272BEBD800AF9814 /* NavigationReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationReducer.swift; sourceTree = "<group>"; };
 		A2A9DFA2270C532E006B1E60 /* SelectedCoffeeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCoffeeRepository.swift; sourceTree = "<group>"; };
 		A2A9DFA4270C5DE3006B1E60 /* UserDefaultsSelectedCoffeeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsSelectedCoffeeRepository.swift; sourceTree = "<group>"; };
 		A2A9DFA6270C7C7D006B1E60 /* ActiveCoffeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveCoffeeView.swift; sourceTree = "<group>"; };
@@ -347,6 +351,7 @@
 				A2F590E42726E41C008C9D6C /* AppState.swift */,
 				A2F590ED2727FF3F008C9D6C /* AppReducer.swift */,
 				A2F590F227294F98008C9D6C /* NavigationState.swift */,
+				A2A87150272BEBD800AF9814 /* NavigationReducer.swift */,
 			);
 			path = AppState;
 			sourceTree = "<group>";
@@ -570,6 +575,7 @@
 			isa = PBXGroup;
 			children = (
 				A2F590E72726E477008C9D6C /* AddCoffeeState.swift */,
+				A2A8714E272BDDCF00AF9814 /* AddCoffeeReducer.swift */,
 			);
 			path = AddCoffee;
 			sourceTree = "<group>";
@@ -922,6 +928,7 @@
 				A2F590E32726CAFD008C9D6C /* SelectedCoffeeMiddleware.swift in Sources */,
 				A2F590E52726E41C008C9D6C /* AppState.swift in Sources */,
 				A2F590E22726CA5D008C9D6C /* CoffeeListReducer.swift in Sources */,
+				A2A87151272BEBD800AF9814 /* NavigationReducer.swift in Sources */,
 				A2A9DFA3270C532E006B1E60 /* SelectedCoffeeRepository.swift in Sources */,
 				A2F590F327294F98008C9D6C /* NavigationState.swift in Sources */,
 				A2F590E82726E477008C9D6C /* AddCoffeeState.swift in Sources */,
@@ -931,6 +938,7 @@
 				A2F590DF2726CA08008C9D6C /* AppStore.swift in Sources */,
 				A2A9DFB0270EBA44006B1E60 /* CoffeeBrewing.swift in Sources */,
 				A29B603C2716D0BA00C7026B /* ColorRGB.swift in Sources */,
+				A2A8714F272BDDCF00AF9814 /* AddCoffeeReducer.swift in Sources */,
 				A2EFC682255EB93900D9E93F /* Coffee.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

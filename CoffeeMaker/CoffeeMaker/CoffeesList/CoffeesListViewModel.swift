@@ -18,9 +18,12 @@ final class CoffeesListViewModel: ObservableObject, Identifiable {
         self.store = store
         setupBindings()
     }
-
+    
     private func setupBindings() {
-        coffees = store.state.coffeeList.coffees.map { CoffeeListItem(coffee: $0, isSelected: false) }
+        coffees = store.state.coffeeList.coffees
+            .map {
+                CoffeeListItem(coffee: $0, isSelected: $0.id == store.state.coffeeList.selecetedCoffeeId)
+            }
     }
 
     func selectedCoffee(coffee: CoffeeListItem) {

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Domain
+import Data
 
 struct BaseView: View {
 
@@ -18,8 +19,14 @@ struct BaseView: View {
             navigationState: .coffeeList
         ),
         reducer: appReducer,
-        middlewares: [])
+        middlewares: [
+            listenToChangingSelectedCoffee(using: UserDefaultsSelectedCoffeeRepository()),
+            changeSelectedCoffee(using: UserDefaultsSelectedCoffeeRepository())
+        ])
 
+    init() {
+        appStore.dispatch(.coffeeListAction(.initial))
+    }
 
     @ViewBuilder
     var body: some View {

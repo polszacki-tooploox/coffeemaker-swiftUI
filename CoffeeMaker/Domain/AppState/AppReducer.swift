@@ -13,9 +13,10 @@ public let appReducer: Reducer<AppState, AppAction> = { state, action in
     switch action {
     case .coffeeListAction(let coffeeListAction):
         mutableState.coffeeList = coffeeListReducer(state.coffeeList, coffeeListAction)
-    default:
-        break
+    case .addCoffeeAction(let addCoffeeAction):
+        mutableState.addCoffee = addCoffeeReducer(state.addCoffee, addCoffeeAction)
     }
+    mutableState = navigationReducer(mutableState, action)
 
     return mutableState
 }

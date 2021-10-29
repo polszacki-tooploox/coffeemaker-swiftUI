@@ -12,7 +12,7 @@ import Data
 final class ViewsConstructor {
 
     static func coffeeListView(store: AppStore) -> CoffeesList {
-        let activeCoffeeViewModel = ActiveCoffeeViewModel()
+        let activeCoffeeViewModel = ActiveCoffeeViewModel(store: store)
         let viewModel = CoffeesListViewModel(store: store)
         return CoffeesList(viewModel: viewModel, activeCoffeeViewModel: activeCoffeeViewModel)
     }

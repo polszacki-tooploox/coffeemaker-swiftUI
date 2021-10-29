@@ -14,5 +14,6 @@ public struct AddCoffeeState {
 }
 
 public enum AddCoffeeAction {
-    case todo
+    case backAction
+    case addAction
 }

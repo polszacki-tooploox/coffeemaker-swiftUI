@@ -18,6 +18,7 @@ public struct CoffeeListState {
 }
 
 public enum CoffeeListAction {
+    case initial
     case selectCoffee(coffeeId: String?)
     case selectAddCoffee
     case selectBrewCoffee
