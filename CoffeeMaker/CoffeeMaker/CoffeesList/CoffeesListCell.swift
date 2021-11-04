@@ -29,6 +29,7 @@ struct CoffeesListCell: View {
                 .padding(.leading, 5.0)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
+            .contentShape(Rectangle())
         }
     }
 }
