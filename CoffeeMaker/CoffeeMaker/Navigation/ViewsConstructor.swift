@@ -18,7 +18,7 @@ final class ViewsConstructor {
     }
 
     static func addCoffeeView(store: AppStore) -> AddCoffeeView {
-        let viewModel = AddCoffeeViewModel()
+        let viewModel = AddCoffeeViewModel(store: store)
         return AddCoffeeView(viewModel: viewModel)
     }
 }

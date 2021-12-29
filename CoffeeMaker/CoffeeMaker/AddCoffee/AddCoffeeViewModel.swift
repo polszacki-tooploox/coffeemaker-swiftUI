@@ -11,7 +11,7 @@ import SwiftUI
 
 final class AddCoffeeViewModel: ObservableObject, Identifiable {
 
-    @EnvironmentObject var store: AppStore
+    private let store: AppStore
     @State var coffeeColor = Color.red
     @Published var coffeeName: String = ""
     @Published var roasteryName: String = ""
@@ -24,6 +24,9 @@ final class AddCoffeeViewModel: ObservableObject, Identifiable {
             .eraseToAnyPublisher()
     }()
 
+    init(store: AppStore) {
+        self.store = store
+    }
 
     private var disposables = Set<AnyCancellable>()
 
@@ -49,6 +52,6 @@ final class AddCoffeeViewModel: ObservableObject, Identifiable {
     }
 
     func backSelected() {
-//        dependencies.connector.updateState(.coffeesList)
+        store.dispatch(.addCoffeeAction(.backAction))
     }
 }

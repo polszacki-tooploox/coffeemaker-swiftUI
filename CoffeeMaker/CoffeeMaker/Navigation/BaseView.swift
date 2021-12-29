@@ -33,8 +33,10 @@ struct BaseView: View {
         switch appStore.state.navigationState {
         case .coffeeList:
             ViewsConstructor.coffeeListView(store: appStore)
+                .transition(.move(edge: .leading))
         case .addCoffee:
             ViewsConstructor.addCoffeeView(store: appStore)
+                .transition(.move(edge: .trailing))
         default:
             Text("Test")
         }

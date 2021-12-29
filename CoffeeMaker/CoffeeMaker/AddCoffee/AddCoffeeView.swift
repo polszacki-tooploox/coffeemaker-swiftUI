@@ -68,6 +68,7 @@ struct AddCoffeeView: View {
 
 struct AddCoffeeView_Previews: PreviewProvider {
     static var previews: some View {
-        Text("Test")
+        let addCoffeeViewModel = AddCoffeeViewModel(store: .mocked)
+        AddCoffeeView(viewModel: addCoffeeViewModel)
     }
 }

@@ -10,6 +10,7 @@
 		A20B8222257A76C800FEA9E4 /* Coffee+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20B8221257A76C800FEA9E4 /* Coffee+Mapping.swift */; };
 		A20B8252257A8DA900FEA9E4 /* AddCoffeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20B8251257A8DA900FEA9E4 /* AddCoffeeView.swift */; };
 		A220C304271D8DBA00D87AD0 /* ViewsConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A220C303271D8DBA00D87AD0 /* ViewsConstructor.swift */; };
+		A2395DD1277C553B00F94BA6 /* AppStore+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395DD0277C553B00F94BA6 /* AppStore+Mock.swift */; };
 		A24321D225821E9900863C71 /* AddCoffeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24321D125821E9900863C71 /* AddCoffeeViewModel.swift */; };
 		A2576DA6256B9B4A00B1EF86 /* CoffeeMaker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2EFC601255EB19700D9E93F /* CoffeeMaker.xcdatamodeld */; };
 		A2576DAD256B9B6300B1EF86 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EFC5FF255EB19700D9E93F /* CoreDataStack.swift */; };
@@ -150,6 +151,7 @@
 		A20B8221257A76C800FEA9E4 /* Coffee+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coffee+Mapping.swift"; sourceTree = "<group>"; };
 		A20B8251257A8DA900FEA9E4 /* AddCoffeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoffeeView.swift; sourceTree = "<group>"; };
 		A220C303271D8DBA00D87AD0 /* ViewsConstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsConstructor.swift; sourceTree = "<group>"; };
+		A2395DD0277C553B00F94BA6 /* AppStore+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStore+Mock.swift"; sourceTree = "<group>"; };
 		A24321D125821E9900863C71 /* AddCoffeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoffeeViewModel.swift; sourceTree = "<group>"; };
 		A24F49EB2722A9C900728BAF /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
 		A24F49F22722BC3D00728BAF /* CoffeeListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeListState.swift; sourceTree = "<group>"; };
@@ -380,6 +382,7 @@
 			children = (
 				A2A9DFB4270EF7A0006B1E60 /* MockedModels.swift */,
 				A2A9DFB6270EF7AB006B1E60 /* MockedUseCases.swift */,
+				A2395DD0277C553B00F94BA6 /* AppStore+Mock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -888,6 +891,7 @@
 				A20B8252257A8DA900FEA9E4 /* AddCoffeeView.swift in Sources */,
 				A29B603A2715B37600C7026B /* CoffeesListCell.swift in Sources */,
 				A29B6041271707F200C7026B /* CoffeeListItem.swift in Sources */,
+				A2395DD1277C553B00F94BA6 /* AppStore+Mock.swift in Sources */,
 				A2A9DFAD270C7D83006B1E60 /* Color+CoffeeMaker.swift in Sources */,
 				A2A9DFAA270C7CC6006B1E60 /* ActiveCoffeeViewModel.swift in Sources */,
 				A2EFC6B5255EC41300D9E93F /* CoffeesList.swift in Sources */,
